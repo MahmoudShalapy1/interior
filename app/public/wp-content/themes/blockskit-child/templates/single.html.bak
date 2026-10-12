@@ -1,0 +1,15 @@
+<!-- wp:template-part {"slug":"header","theme":"blockskit-child","tagName":"header"} /-->
+
+<article class="luxe-single-project" id="primary" role="main">
+	<div class="luxe-section luxe-section--ink" style="padding-top: clamp(8rem, 14vw, 12rem);">
+		<div class="luxe-container">
+			<span class="luxe-meta-latin" style="margin-bottom: 1rem;">CURATED PROJECT ARCHIVE</span>
+			<!-- wp:post-title {"level":1,"className":"luxe-h1"} /-->
+			<div class="luxe-hairline" style="margin-block: 2rem;"></div>
+		</div>
+	</div>
+
+	<!-- wp:post-content {"layout":{"type":"default"}} /-->
+</article>
+
+<!-- wp:template-part {"slug":"footer","theme":"blockskit-child","tagName":"footer"} /-->

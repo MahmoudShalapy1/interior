@@ -1,0 +1,271 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header (INTERIOR Luxury)",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer (INTERIOR Signature)",
+      "area": "footer"
+    }
+  ],
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "1240px",
+      "wideSize": "1520px"
+    },
+    "color": {
+      "palette": [
+        {
+          "name": "Ink Obsidian",
+          "color": "#0D0C0A",
+          "slug": "ink"
+        },
+        {
+          "name": "Charcoal Surface",
+          "color": "#161513",
+          "slug": "charcoal"
+        },
+        {
+          "name": "Charcoal Light",
+          "color": "#201E1A",
+          "slug": "charcoal-light"
+        },
+        {
+          "name": "Limestone Raw",
+          "color": "#ECE6DA",
+          "slug": "limestone"
+        },
+        {
+          "name": "Bone Editorial",
+          "color": "#F6F2EA",
+          "slug": "bone"
+        },
+        {
+          "name": "Architectural Brass",
+          "color": "#B59A6A",
+          "slug": "brass"
+        },
+        {
+          "name": "Brass Light",
+          "color": "#D4B996",
+          "slug": "brass-light"
+        },
+        {
+          "name": "Text Muted",
+          "color": "#8E8A82",
+          "slug": "text-muted"
+        },
+        {
+          "name": "Hairline Border",
+          "color": "rgba(181, 154, 106, 0.15)",
+          "slug": "hairline"
+        }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "name": "IBM Plex Sans Arabic",
+          "fontFamily": "'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          "slug": "heading"
+        },
+        {
+          "name": "IBM Plex Sans Arabic",
+          "fontFamily": "'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          "slug": "body"
+        },
+        {
+          "name": "Plus Jakarta Sans",
+          "fontFamily": "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          "slug": "latin"
+        },
+        {
+          "name": "DM Mono",
+          "fontFamily": "'DM Mono', 'SFMono-Regular', Consolas, monospace",
+          "slug": "mono"
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "Micro (12px)",
+          "size": "0.75rem",
+          "slug": "xs"
+        },
+        {
+          "name": "Small (13px)",
+          "size": "0.8125rem",
+          "slug": "sm"
+        },
+        {
+          "name": "Base (15px)",
+          "size": "0.9375rem",
+          "slug": "base"
+        },
+        {
+          "name": "Medium (17px)",
+          "size": "1.0625rem",
+          "slug": "md"
+        },
+        {
+          "name": "Large (19px)",
+          "size": "1.1875rem",
+          "slug": "lg"
+        },
+        {
+          "name": "XL (22px)",
+          "size": "1.375rem",
+          "slug": "xl"
+        },
+        {
+          "name": "2XL (26px)",
+          "size": "1.625rem",
+          "slug": "2xl"
+        },
+        {
+          "name": "3XL (32px)",
+          "size": "2rem",
+          "slug": "3xl"
+        },
+        {
+          "name": "4XL (40px)",
+          "size": "2.5rem",
+          "slug": "4xl"
+        },
+        {
+          "name": "Hero (50px)",
+          "size": "3.125rem",
+          "slug": "hero"
+        }
+      ]
+    },
+    "spacing": {
+      "spacingScale": {
+        "operator": "*",
+        "increment": 1.5,
+        "steps": 7,
+        "mediumStep": 1.5,
+        "unit": "rem"
+      },
+      "spacingSizes": [
+        {
+          "name": "3XS (4px)",
+          "size": "0.25rem",
+          "slug": "3xs"
+        },
+        {
+          "name": "2XS (8px)",
+          "size": "0.5rem",
+          "slug": "2xs"
+        },
+        {
+          "name": "XS (12px)",
+          "size": "0.75rem",
+          "slug": "xs"
+        },
+        {
+          "name": "SM (16px)",
+          "size": "1rem",
+          "slug": "sm"
+        },
+        {
+          "name": "MD (24px)",
+          "size": "1.5rem",
+          "slug": "md"
+        },
+        {
+          "name": "LG (40px)",
+          "size": "2.5rem",
+          "slug": "lg"
+        },
+        {
+          "name": "XL (64px)",
+          "size": "4rem",
+          "slug": "xl"
+        },
+        {
+          "name": "2XL (96px)",
+          "size": "6rem",
+          "slug": "2xl"
+        },
+        {
+          "name": "3XL (128px)",
+          "size": "8rem",
+          "slug": "3xl"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#0D0C0A",
+      "text": "#F6F2EA"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--body)",
+      "fontSize": "var(--wp--preset--font-size--base)",
+      "lineHeight": "1.7"
+    },
+    "elements": {
+      "h1": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--heading)",
+          "fontWeight": "600",
+          "lineHeight": "1.25"
+        },
+        "color": {
+          "text": "#F6F2EA"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--heading)",
+          "fontWeight": "600",
+          "lineHeight": "1.28"
+        },
+        "color": {
+          "text": "#F6F2EA"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--heading)",
+          "fontWeight": "600",
+          "lineHeight": "1.32"
+        },
+        "color": {
+          "text": "#F6F2EA"
+        }
+      },
+      "h4": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--body)",
+          "fontWeight": "500",
+          "lineHeight": "1.4"
+        },
+        "color": {
+          "text": "#F6F2EA"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "#B59A6A"
+        },
+        "typography": {
+          "textDecoration": "none"
+        }
+      },
+      "button": {
+        "border": {
+          "radius": "0px"
+        }
+      }
+    }
+  }
+}

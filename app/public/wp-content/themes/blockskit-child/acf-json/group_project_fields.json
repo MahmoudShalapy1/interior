@@ -1,0 +1,74 @@
+{
+  "key": "group_interior_project_fields",
+  "title": "تفاصيل المشروع المعماري (Architectural Project Specs)",
+  "fields": [
+    {
+      "key": "field_proj_location",
+      "label": "موقع المشروع (المدينة والحي)",
+      "name": "project_location",
+      "type": "text",
+      "instructions": "مثال: حي حطين، الرياض",
+      "required": 0,
+      "default_value": "الرياض، المملكة العربية السعودية"
+    },
+    {
+      "key": "field_proj_area",
+      "label": "المساحة الإجمالية للمشروع",
+      "name": "project_area",
+      "type": "text",
+      "instructions": "مثال: 3,850 م²",
+      "required": 0,
+      "default_value": "3,500 م²"
+    },
+    {
+      "key": "field_proj_year",
+      "label": "سنة الإنجاز والتسليم",
+      "name": "project_year",
+      "type": "text",
+      "instructions": "مثال: 2025",
+      "required": 0,
+      "default_value": "2025"
+    },
+    {
+      "key": "field_proj_materials",
+      "label": "الخامات النبيلة المستخدمة",
+      "name": "project_materials",
+      "type": "textarea",
+      "instructions": "مثال: رخام كلكتا فيولا، بلوط مدخن، برونز فرنسي معتق",
+      "required": 0,
+      "rows": 3
+    },
+    {
+      "key": "field_proj_nda",
+      "label": "خاضع لاتفاقية سرية مطلقة (NDA Vault)",
+      "name": "project_nda",
+      "type": "true_false",
+      "instructions": "في حال التفعيل، تظهر بطاقة المشروع كملف سري مشفر داخل الخزنة",
+      "default_value": 0
+    },
+    {
+      "key": "field_proj_testimonial",
+      "label": "شهادة العميل التحريرية (Testimonial)",
+      "name": "project_testimonial",
+      "type": "textarea",
+      "instructions": "اقتباس المالك أو العائلة المالكة المنشور بموجب الاتفاقية",
+      "required": 0,
+      "rows": 4
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "project"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "active": true
+}

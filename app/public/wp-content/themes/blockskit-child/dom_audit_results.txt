@@ -1,0 +1,31 @@
+
+Page: Home (/)
+  Untranslated Arabic text nodes (outside data-i18n): 3
+    ! 'إنتيريور — من الخط إلى المكان | عمارة وتنفيذ القصور الفاخرة بالرياض'
+    ! 'إنتيريور — من الخط إلى المكان | عمارة وتنفيذ القصور الفاخرة بالرياض'
+    ! 'تخطى إلى المحتوى'
+
+Page: About (/about)
+  Untranslated Arabic text nodes (outside data-i18n): 2
+    ! 'عن الاستوديو والمونوغراف المعماري — إنتيريور'
+    ! 'عن الاستوديو والمونوغراف المعماري — إنتيريور'
+
+Page: Services (/services)
+  Untranslated Arabic text nodes (outside data-i18n): 2
+    ! 'منظومة الخدمات والسيادة الكاملة — إنتيريور'
+    ! 'منظومة الخدمات والسيادة الكاملة — إنتيريور'
+
+Page: Approach (/approach)
+  Untranslated Arabic text nodes (outside data-i18n): 2
+    ! 'المنهج التنفيذي وحوكمة الاستثمار — إنتيريور'
+    ! 'المنهج التنفيذي وحوكمة الاستثمار — إنتيريور'
+
+Page: Projects (/projects)
+  Untranslated Arabic text nodes (outside data-i18n): 2
+    ! 'أرشيف المشاريع والقصور المنفذة — إنتيريور'
+    ! 'أرشيف المشاريع والقصور المنفذة — إنتيريور'
+
+Page: Contact (/contact)
+  Untranslated Arabic text nodes (outside data-i18n): 2
+    ! 'الملف الخاص وبدء دراسة المشروع — إنتيريور'
+    ! 'الملف الخاص وبدء دراسة المشروع — إنتيريور'

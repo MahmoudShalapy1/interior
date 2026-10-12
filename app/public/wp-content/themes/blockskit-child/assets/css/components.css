@@ -1,0 +1,191 @@
+/**
+ * INTERIOR Architectural UI Components
+ * Pure High-End Editorial Elements: Zero Box Clichés, Precise Joinery
+ *
+ * @package Blockskit_Child
+ */
+
+/* 1. Architectural Buttons */
+.luxe-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: 1rem 2.25rem;
+  border-radius: 0 !important;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  line-height: 1;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+/* Ghost Button: The Architectural Standard */
+.luxe-btn--ghost {
+  background-color: transparent;
+  color: var(--interior-bone);
+  border-color: var(--interior-brass);
+}
+
+.luxe-btn--ghost:hover {
+  background-color: var(--interior-brass);
+  color: var(--interior-ink);
+  border-color: var(--interior-brass);
+}
+
+/* Solid Button: Direct Decisive Action */
+.luxe-btn--solid {
+  background-color: var(--interior-brass);
+  color: var(--interior-ink);
+  border-color: var(--interior-brass);
+}
+
+.luxe-btn--solid:hover {
+  background-color: var(--interior-brass-light);
+  color: var(--interior-ink);
+  border-color: var(--interior-brass-light);
+}
+
+/* Editorial Minimalist Text Link */
+.luxe-btn--text {
+  padding: 0;
+  background: transparent;
+  color: var(--interior-brass-light);
+  border: 0;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.luxe-btn--text::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--interior-brass);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform var(--transition-normal);
+}
+
+.luxe-btn--text:hover::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+/* 2. Architectural Cards (No Elementor Shadow Clichés) */
+.luxe-card {
+  position: relative;
+  background-color: var(--interior-charcoal);
+  border: 1px solid var(--interior-hairline);
+  padding: clamp(2rem, 3.5vw, 3.5rem);
+  transition: border-color var(--transition-normal), background-color var(--transition-normal);
+}
+
+.luxe-card:hover {
+  border-color: rgba(181, 154, 106, 0.45);
+  background-color: var(--interior-charcoal-light);
+}
+
+/* Editorial Specimen Card */
+.luxe-card--specimen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+}
+
+/* 3. Editorial Numbering & Index Markers */
+.luxe-step-number {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--interior-brass);
+  direction: ltr;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+
+/* 4. Stat Callouts & Big Scale Metrics */
+.luxe-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.luxe-metric__number {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  line-height: 1.1;
+  color: var(--interior-bone);
+  font-weight: 400;
+}
+
+.luxe-metric__label {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--interior-text-muted);
+  line-height: 1.5;
+}
+
+/* 5. Precision Architectural Framing (Image Containers) */
+.luxe-frame {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--interior-charcoal);
+  border: 1px solid var(--interior-hairline);
+}
+
+.luxe-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease-editorial);
+}
+
+.luxe-frame:hover img {
+  transform: scale(1.035);
+}
+
+/* Ratio utilities */
+.luxe-ratio-16-9 { aspect-ratio: 16 / 9; }
+.luxe-ratio-4-3 { aspect-ratio: 4 / 3; }
+.luxe-ratio-1-1 { aspect-ratio: 1 / 1; }
+.luxe-ratio-portrait { aspect-ratio: 3 / 4; }
+
+/* 6. Atmosphere Switcher Pills (Section 12 White-Label) */
+.luxe-theme-switcher-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.luxe-theme-btn {
+  background: transparent;
+  border: 1px solid var(--interior-hairline);
+  color: var(--interior-text-muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all var(--transition-fast);
+}
+
+.luxe-theme-btn:hover,
+.luxe-theme-btn.is-active {
+  border-color: var(--interior-brass);
+  color: var(--interior-brass-light);
+  background-color: rgba(181, 154, 106, 0.12);
+}
+

@@ -1,0 +1,1142 @@
+/* INTERIOR Luxury Core Engine */
+:root {
+  /* Inherit and bridge with INTERIOR architectural tokens */
+  --luxe-bg-deep: var(--interior-ink, #0D0C0A);
+  --luxe-surface: var(--interior-charcoal, #161513);
+  --luxe-surface-hover: var(--interior-charcoal-light, #201E1A);
+  --luxe-gold: var(--interior-brass-light, #D4B996);
+  --luxe-gold-bright: #F0DFC8;
+  --luxe-gold-gradient: linear-gradient(135deg, #F3E7D3 0%, #D4B996 50%, #B59A6A 100%);
+  --luxe-hairline: var(--interior-hairline, rgba(181, 154, 106, 0.15));
+  --luxe-hairline-light: rgba(181, 154, 106, 0.08);
+  --luxe-hairline-focus: rgba(181, 154, 106, 0.5);
+  --luxe-text-light: var(--interior-bone, #F6F2EA);
+  --luxe-text-muted: var(--interior-text-muted, #8E8A82);
+
+  /* Unified Typography mapping */
+  --font-serif: var(--font-heading);
+  --font-sans: var(--font-body);
+
+  --transition-slow: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   Global Reset & Minimalist Canvas
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto !important;
+  font-size: 16px;
+  background-color: var(--luxe-bg-deep);
+  color: var(--luxe-text-light);
+  font-feature-settings: "locl" 0;
+}
+
+body.luxe-landing-body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--luxe-bg-deep);
+  color: var(--luxe-text-light);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 2;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "locl" 0;
+}
+
+[dir="rtl"] body.luxe-landing-body,
+body.luxe-landing-body[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="ltr"] body.luxe-landing-body,
+body.luxe-landing-body[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Scroll Progress Bar - Hairline Gold */
+#luxe-scroll-progress {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 1.5px;
+  width: 0%;
+  background: var(--luxe-gold-gradient);
+  z-index: 999999;
+  transition: width 0.1s ease-out;
+}
+
+/* Subtle Ambient Radial Glow */
+#luxe-ambient-spotlight {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(900px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(212, 185, 150, 0.04), transparent 70%);
+}
+
+/* ==========================================================================
+   Architectural Typography (Unified IBM Plex Sans Arabic Precision)
+   ========================================================================== */
+h1, h2, .luxe-editorial-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--luxe-text-light);
+  line-height: 1.25;
+  letter-spacing: normal !important;
+  word-spacing: normal;
+  margin: 0 0 1.5rem;
+}
+
+h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--luxe-text-light);
+  letter-spacing: normal !important;
+  line-height: 1.35;
+  margin: 0 0 1rem;
+}
+
+p {
+  color: var(--luxe-text-muted);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: normal !important;
+  margin: 0 0 1.5rem;
+}
+
+/* Minimalist Editorial Badges & Subtitles */
+.luxe-subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--luxe-gold);
+  margin-bottom: 1.5rem;
+}
+
+.luxe-subtitle::before {
+  content: '';
+  width: 25px;
+  height: 1px;
+  background: var(--luxe-gold);
+}
+
+.luxe-roman-num {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--luxe-gold);
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   Ghost Buttons (Refined, Transparent, Hairline Edge)
+   ========================================================================== */
+.luxe-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 1.15rem 2.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--luxe-text-light);
+  border: 1px solid var(--luxe-gold);
+  border-radius: 0;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.luxe-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--luxe-gold);
+  opacity: 0;
+  transition: var(--transition-smooth);
+  z-index: 1;
+}
+
+.luxe-btn span,
+.luxe-btn svg {
+  position: relative;
+  z-index: 2;
+  transition: var(--transition-smooth);
+}
+
+.luxe-btn:hover {
+  border-color: var(--luxe-gold-bright);
+  color: var(--luxe-bg-deep);
+  box-shadow: 0 0 35px rgba(212, 185, 150, 0.25);
+  transform: translateY(-2px);
+}
+
+.luxe-btn:hover::after {
+  opacity: 1;
+}
+
+.luxe-btn-ghost {
+  border: 1px solid var(--luxe-hairline);
+  color: var(--luxe-text-light);
+}
+
+.luxe-btn-ghost:hover {
+  border-color: var(--luxe-gold);
+  color: var(--luxe-gold-bright);
+  background: rgba(212, 185, 150, 0.05);
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+.luxe-btn-ghost:hover::after {
+  display: none;
+}
+
+/* Link Arrow */
+.luxe-editorial-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: var(--luxe-gold);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  transition: var(--transition-smooth);
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid transparent;
+}
+
+.luxe-editorial-link:hover {
+  color: var(--luxe-gold-bright);
+  border-bottom-color: var(--luxe-gold);
+  gap: 1.25rem;
+}
+
+/* ==========================================================================
+   Minimalist Navigation Header
+   ========================================================================== */
+/* ==========================================================================
+   Minimalist Navigation Header & Executive Actions
+   ========================================================================== */
+.luxe-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.35rem 0;
+  transition: padding 0.35s ease, background 0.35s ease, border-color 0.35s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.luxe-header.is-scrolled {
+  padding: 0.95rem 0;
+  background: rgba(8, 9, 11, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--luxe-hairline);
+}
+
+.luxe-header .luxe-container {
+  max-width: 1520px;
+  width: 100%;
+  padding-inline: clamp(1.25rem, 3.5vw, 3.5rem);
+}
+
+.luxe-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2.5rem);
+  width: 100%;
+}
+
+.luxe-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.luxe-brand-logo {
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 1.75vw, 1.7rem);
+  font-weight: 700;
+  letter-spacing: normal !important;
+  color: var(--luxe-text-light);
+  line-height: 1;
+}
+
+.luxe-brand-tag,
+.luxe-brand .luxe-meta-latin {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--luxe-gold);
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.luxe-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 1.6vw, 2.2rem);
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.luxe-nav-link {
+  font-family: inherit;
+  color: var(--luxe-text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 400;
+  white-space: nowrap !important;
+  letter-spacing: normal;
+  transition: color 0.25s ease;
+  position: relative;
+  padding: 0.45rem 0;
+  line-height: 1;
+}
+
+.luxe-nav-link:hover,
+.luxe-nav-link.is-active {
+  color: var(--luxe-text-light);
+}
+
+.luxe-nav-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 1.5px;
+  background: var(--luxe-gold);
+}
+
+/* Header Actions */
+.luxe-header-actions {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 0.9vw, 1.15rem);
+  flex-shrink: 0;
+}
+
+.luxe-header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.35rem !important;
+  font-family: inherit !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  letter-spacing: normal !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  color: var(--interior-bone) !important;
+  border: 1px solid var(--interior-hairline) !important;
+  background: transparent !important;
+  text-decoration: none;
+  border-radius: 0px !important;
+  transition: all 0.3s ease !important;
+}
+
+.luxe-header-cta:hover {
+  border-color: var(--interior-brass) !important;
+  color: var(--interior-brass-light) !important;
+  background: rgba(181, 154, 106, 0.08) !important;
+}
+
+/* Mobile / Curtain Menu Toggle */
+.luxe-mobile-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  background: rgba(22, 21, 19, 0.6);
+  border: 1px solid var(--luxe-hairline);
+  color: var(--luxe-gold);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.luxe-mobile-toggle:hover {
+  border-color: var(--interior-brass);
+  background: rgba(181, 154, 106, 0.12);
+}
+
+/* ==========================================================================
+   Editorial Layout Architecture
+   ========================================================================== */
+.luxe-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  position: relative;
+  z-index: 10;
+}
+
+.luxe-section {
+  padding: 9rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.luxe-hairline-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--luxe-hairline);
+  margin: 0;
+}
+
+/* ==========================================================================
+   1. Hero Section (Grand Architectural Digest Poster)
+   ========================================================================== */
+.luxe-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 12rem 0 8rem;
+  overflow: hidden;
+}
+
+.luxe-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.luxe-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.32) contrast(1.15);
+  transform: scale(1.02);
+  transition: transform 12s ease-out;
+}
+
+.luxe-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 9, 11, 0.4) 0%, rgba(8, 9, 11, 0.95) 100%);
+  z-index: 2;
+}
+
+.luxe-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 1020px;
+}
+
+.luxe-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--luxe-gold);
+  margin-bottom: 2.2rem;
+}
+
+.luxe-hero-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-hero);
+  line-height: 1.15;
+  margin-bottom: 2rem;
+  letter-spacing: normal !important;
+}
+
+.luxe-hero-title em {
+  font-style: normal;
+  color: var(--luxe-gold);
+  font-weight: inherit;
+}
+
+.luxe-hero-desc {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  color: #A0A5B2;
+  max-width: 680px;
+  line-height: 1.85;
+  margin-bottom: 3rem;
+}
+
+.luxe-hero-actions {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Editorial Minimal Stats Grid */
+.luxe-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--luxe-hairline);
+}
+
+.luxe-stat-item h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 1.6rem + 1.2vw, 2.5rem);
+  font-weight: 500;
+  color: var(--luxe-text-light);
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.luxe-stat-item p {
+  font-size: var(--text-sm);
+  letter-spacing: 0.05em;
+  color: var(--luxe-text-muted);
+  margin: 0;
+}
+
+/* ==========================================================================
+   2. Interactive Architectural List (Services - NO BOXES)
+   ========================================================================== */
+.luxe-arch-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.luxe-arch-item {
+  position: relative;
+  padding: 4rem 0;
+  border-top: 1px solid var(--luxe-hairline);
+  transition: var(--transition-slow);
+}
+
+.luxe-arch-item:last-child {
+  border-bottom: 1px solid var(--luxe-hairline);
+}
+
+.luxe-arch-item-inner {
+  display: grid;
+  grid-template-columns: 80px 1.4fr 1.6fr 180px;
+  align-items: baseline;
+  gap: 3.5rem;
+  transition: var(--transition-smooth);
+}
+
+.luxe-arch-num {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  color: var(--luxe-gold);
+  opacity: 0.6;
+  transition: var(--transition-smooth);
+}
+
+.luxe-arch-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--luxe-text-light);
+  margin: 0;
+  transition: var(--transition-smooth);
+}
+
+.luxe-arch-desc {
+  font-size: 1rem;
+  color: var(--luxe-text-muted);
+  line-height: 2;
+  margin: 0;
+}
+
+.luxe-arch-action {
+  text-align: left;
+}
+
+/* Cinematic Hover State on Editorial List */
+.luxe-arch-item:hover {
+  background: rgba(212, 185, 150, 0.02);
+}
+
+.luxe-arch-item:hover .luxe-arch-num {
+  opacity: 1;
+  color: var(--luxe-gold-bright);
+}
+
+.luxe-arch-item:hover .luxe-arch-title {
+  color: var(--luxe-gold);
+  transform: translateX(-10px);
+}
+
+/* Floating Image Reveal Drawer for Services */
+.luxe-arch-preview-wrap {
+  position: relative;
+  margin-top: 2.5rem;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxe-arch-item:hover .luxe-arch-preview-wrap {
+  height: 380px;
+  opacity: 1;
+}
+
+.luxe-arch-preview-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+  transition: transform 1.2s ease;
+}
+
+.luxe-arch-item:hover .luxe-arch-preview-wrap img {
+  transform: scale(1.04);
+}
+
+/* ==========================================================================
+   3. Asymmetric Masonry Editorial Grid (Masterpieces Portfolio)
+   ========================================================================== */
+.luxe-masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3.5rem;
+  align-items: stretch;
+}
+
+.luxe-masonry-item {
+  position: relative;
+  overflow: hidden;
+  background: var(--luxe-surface);
+  transition: var(--transition-slow);
+}
+
+/* Col spans */
+.luxe-masonry-wide {
+  grid-column: span 8;
+  height: 640px;
+}
+
+.luxe-masonry-tall {
+  grid-column: span 4;
+  height: 640px;
+}
+
+.luxe-masonry-half {
+  grid-column: span 6;
+  height: 520px;
+}
+
+.luxe-masonry-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+.luxe-masonry-item:hover img {
+  transform: scale(1.06);
+  filter: brightness(0.75);
+}
+
+.luxe-masonry-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(8, 9, 11, 0.95) 95%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3rem;
+  transition: var(--transition-smooth);
+}
+
+.luxe-masonry-tag {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--luxe-gold);
+  margin-bottom: 0.75rem;
+}
+
+.luxe-masonry-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--luxe-text-light);
+  margin-bottom: 0.5rem;
+}
+
+.luxe-masonry-meta {
+  font-size: 0.875rem;
+  color: var(--luxe-text-muted);
+  line-height: 1.8;
+}
+
+/* ==========================================================================
+   4. Full-Width Before & After Comparison Slider
+   ========================================================================== */
+.luxe-slider-wrap {
+  position: relative;
+  width: 100%;
+  height: 720px;
+  overflow: hidden;
+  user-select: none;
+  background: var(--luxe-bg-deep);
+  border-top: 1px solid var(--luxe-hairline);
+  border-bottom: 1px solid var(--luxe-hairline);
+}
+
+.luxe-slider-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.luxe-slider-after-container {
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+  border-left: 1px solid var(--luxe-gold);
+}
+
+.luxe-slider-after-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  max-width: none;
+  object-fit: cover;
+}
+
+.luxe-slider-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(8, 9, 11, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--luxe-gold);
+  color: var(--luxe-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: ew-resize;
+  z-index: 10;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.luxe-slider-handle:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  border-color: var(--luxe-gold-bright);
+}
+
+.luxe-slider-badge {
+  position: absolute;
+  top: 2.5rem;
+  padding: 0.6rem 1.8rem;
+  background: rgba(8, 9, 11, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--luxe-hairline);
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--luxe-text-light);
+  z-index: 5;
+}
+
+.luxe-slider-badge.before { right: 3rem; }
+.luxe-slider-badge.after { left: 3rem; }
+
+/* ==========================================================================
+   5. Exclusive Palace Invitation Protocol Form (Transparent & Hairline)
+   ========================================================================== */
+.luxe-protocol-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.luxe-protocol-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.luxe-protocol-header h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 600;
+}
+
+.luxe-protocol-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.luxe-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+}
+
+.luxe-field-single {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.luxe-field-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--luxe-gold);
+  margin-bottom: 0.85rem;
+}
+
+/* Transparent Inputs with Hairline Bottom */
+.luxe-field-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--luxe-hairline);
+  padding: 1rem 0;
+  color: var(--luxe-text-light);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+  border-radius: 0;
+  transition: var(--transition-smooth);
+}
+
+.luxe-field-input:focus {
+  outline: none;
+  border-bottom-color: var(--luxe-gold);
+}
+
+.luxe-field-input::placeholder {
+  color: rgba(126, 130, 141, 0.45);
+  font-size: var(--text-sm);
+}
+
+/* Glassmorphism HQ Card */
+.luxe-glass-card {
+  background: rgba(16, 18, 22, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--luxe-hairline);
+  padding: 3.5rem;
+}
+
+/* ==========================================================================
+   Footer & Minimalist Velvet WhatsApp
+   ========================================================================== */
+.luxe-footer {
+  background: #050608;
+  border-top: 1px solid var(--luxe-hairline);
+  padding: 8rem 0 4rem;
+}
+
+.luxe-footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 0.85fr 1.15fr 1.15fr;
+  gap: clamp(1.75rem, 2.25vw, 3rem);
+  margin-bottom: 5rem;
+  align-items: start;
+}
+
+.luxe-footer-brand h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.luxe-footer-col h3,
+.luxe-footer-col h4 {
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--luxe-gold);
+  margin-bottom: 2rem;
+}
+
+.luxe-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.luxe-footer-links li {
+  margin-bottom: 1.1rem;
+}
+
+.luxe-footer-links a {
+  color: var(--luxe-text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition-smooth);
+}
+
+.luxe-footer-links a:hover {
+  color: var(--luxe-text-light);
+  padding-right: 6px;
+}
+
+.luxe-footer-bottom {
+  border-top: 1px solid var(--luxe-hairline-light);
+  padding-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #555964;
+}
+
+/* ==========================================================================
+   Complete Minimap Removal
+   ========================================================================== */
+.luxe-minimap,
+#luxe-minimap {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+}
+
+/* ==========================================================================
+   Floating Concierge WhatsApp Action Button (Fixed Bottom Corner)
+   ========================================================================== */
+.luxe-whatsapp-float,
+.luxe-whatsapp-pill {
+  position: fixed !important;
+  bottom: 2.25rem !important;
+  z-index: 9999 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  background: rgba(13, 12, 10, 0.92) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid var(--interior-brass) !important;
+  padding: 0.45rem 0.75rem 0.45rem 0.5rem !important;
+  border-radius: 40px !important;
+  color: var(--interior-bone) !important;
+  text-decoration: none !important;
+  font-family: inherit !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(181, 154, 106, 0.15) !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+[dir="rtl"] .luxe-whatsapp-float,
+[dir="rtl"] .luxe-whatsapp-pill {
+  left: 2.25rem !important;
+  right: auto !important;
+}
+
+[dir="ltr"] .luxe-whatsapp-float,
+[dir="ltr"] .luxe-whatsapp-pill {
+  right: 2.25rem !important;
+  left: auto !important;
+}
+
+.luxe-whatsapp-float:hover,
+.luxe-whatsapp-pill:hover {
+  background: rgba(22, 21, 19, 0.98) !important;
+  border-color: var(--interior-brass-light) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(181, 154, 106, 0.3) !important;
+  color: #FFFFFF !important;
+}
+
+.luxe-whatsapp-float__icon,
+.luxe-whatsapp-pill__icon {
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 50% !important;
+  background: rgba(181, 154, 106, 0.15) !important;
+  border: 1px solid var(--interior-brass) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--interior-brass-light) !important;
+  flex-shrink: 0 !important;
+  transition: all 0.35s ease !important;
+}
+
+.luxe-whatsapp-float:hover .luxe-whatsapp-float__icon,
+.luxe-whatsapp-pill:hover .luxe-whatsapp-pill__icon {
+  background: var(--interior-brass) !important;
+  color: var(--interior-ink) !important;
+}
+
+.luxe-whatsapp-float__text,
+.luxe-whatsapp-pill__text {
+  max-width: none !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  white-space: nowrap !important;
+  padding-inline-end: 0.5rem !important;
+  line-height: 1 !important;
+}
+
+/* Responsive Editorial Media Queries */
+@media (max-width: 1100px) {
+  .luxe-nav { display: none !important; }
+  .luxe-header-cta { display: none !important; }
+  .luxe-mobile-toggle { display: flex !important; }
+}
+
+@media (max-width: 1024px) {
+  .luxe-container { padding: 0 2rem; }
+  .luxe-masonry-wide, .luxe-masonry-tall, .luxe-masonry-half { grid-column: span 12; height: 480px; }
+  .luxe-arch-item-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+  .luxe-field-row { grid-template-columns: 1fr; gap: 2rem; }
+  .luxe-footer-grid { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+}
+
+@media (max-width: 768px) {
+  .luxe-whatsapp-float,
+  .luxe-whatsapp-pill {
+    bottom: 5.5rem !important; /* Float safely above the sticky mobile action bar */
+    padding: 0.4rem !important;
+  }
+  .luxe-whatsapp-float__text,
+  .luxe-whatsapp-pill__text {
+    display: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .luxe-hero-stats { grid-template-columns: 1fr; gap: 2.5rem; }
+  .luxe-footer-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+/* ==========================================================================
+   Accessibility & WCAG 2.1 AA Compliance (الوصول الشامل وسهولة الاستخدام)
+   ========================================================================== */
+
+/* 1. Accessible Skip Link */
+.luxe-skip-link {
+  position: fixed !important;
+  top: -120px !important;
+  left: 2rem !important;
+  background: #111417 !important;
+  color: #C5A059 !important;
+  border: 1.5px solid #C5A059 !important;
+  padding: 0.85rem 1.75rem !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  z-index: 999999 !important;
+  text-decoration: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+  transition: top 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+[dir="rtl"] .luxe-skip-link {
+  left: auto !important;
+  right: 2rem !important;
+}
+
+.luxe-skip-link:focus,
+.luxe-skip-link:focus-visible {
+  top: 1.5rem !important;
+  outline: 2px solid #FFFFFF !important;
+  outline-offset: 2px !important;
+}
+
+/* 2. Sovereign High-Contrast Focus Visible (WCAG Criterion 2.4.7) */
+:focus-visible {
+  outline: 2px solid #C5A059 !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 10px rgba(197, 160, 89, 0.45) !important;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.luxe-btn:focus-visible,
+.luxe-lang-btn:focus-visible,
+.luxe-mobile-toggle:focus-visible {
+  outline: 2px solid #C5A059 !important;
+  outline-offset: 3px !important;
+}
+
+/* 3. Screen Reader Only Utility */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+/* 4. Motion Sensitivity / Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  #luxe-ambient-spotlight,
+  #luxe-cursor-dot,
+  #luxe-cursor-ring,
+  #luxe-cursor-coords {
+    display: none !important;
+  }
+}

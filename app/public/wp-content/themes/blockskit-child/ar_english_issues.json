@@ -1,0 +1,146 @@
+{
+  "cs_spec_loc_val": {
+    "text": "حطين &bull; الرياض، المملكة",
+    "file": "single-project.php"
+  },
+  "cs_spec_duration_val": {
+    "text": "18 شهراً &bull; تسليم كامل",
+    "file": "single-project.php"
+  },
+  "cs_pl1_loc": {
+    "text": "قصر حطين &bull; الرياض",
+    "file": "single-project.php"
+  },
+  "cs_pl2_title": {
+    "text": "لوحة 02 // جناح النوم الرئيسي &bull; بلوط طبيعي",
+    "file": "single-project.php"
+  },
+  "cs_quote_author": {
+    "text": "مالك القصر &bull; حي حطين (بيانات محمية بموجب بروتوكول السرية)",
+    "file": "single-project.php"
+  },
+  "cs_dwg_points": {
+    "text": "&bull; 24 نقطة فحص قبل اعتماد التركيب &bull; اختبارات ضغط معملية",
+    "file": "single-project.php"
+  },
+  "cs_next_desc": {
+    "text": "أبراج العليا &bull; 920 م² &bull; استكشاف دراسة الحالة",
+    "file": "single-project.php"
+  },
+  "about_t1_role": {
+    "text": "الشريك المؤسس &bull; كبير المعماريين",
+    "file": "page-templates\\about.php"
+  },
+  "about_t1_cred": {
+    "text": "ماجستير العمارة من جامعة هارفارد &bull; عضو الهيئة السعودية للمهندسين",
+    "file": "page-templates\\about.php"
+  },
+  "about_t2_cred": {
+    "text": "المدرسة الوطنية العليا للفنون الزخرفية &bull; باريس",
+    "file": "page-templates\\about.php"
+  },
+  "about_t3_cred": {
+    "text": "بكالوريوس الهندسة المدنية &bull; معتمد في إدارة المشاريع الاحترافية",
+    "file": "page-templates\\about.php"
+  },
+  "about_t4_cred": {
+    "text": "أكاديمية الفنون الجميلة في كرارا &bull; إيطاليا",
+    "file": "page-templates\\about.php"
+  },
+  "about_t5_cred": {
+    "text": "نقابة كبار حرفيي الخشب &bull; الغابة السوداء، ألمانيا",
+    "file": "page-templates\\about.php"
+  },
+  "about_aw1_desc": {
+    "text": "تكريم التميز في دمج التراث المعماري مع التصميم الفندقي الفاخر &bull; باريس",
+    "file": "page-templates\\about.php"
+  },
+  "about_aw2_desc": {
+    "text": "جائزة أفضل قصر سكني خاص في منطقة الشرق الأوسط &bull; لندن",
+    "file": "page-templates\\about.php"
+  },
+  "about_aw3_desc": {
+    "text": "درع التميز في الدقة الإنشائية ومطابقة الكود السعودي للمقاولات الفاخرة &bull; الرياض",
+    "file": "page-templates\\about.php"
+  },
+  "p1_badge": {
+    "text": "قصر سكني ملكي &bull; حطين، الرياض",
+    "file": "page-templates\\projects.php"
+  },
+  "p1_mats": {
+    "text": "رخام كلكتا فيولا &bull; برونز فرنسي",
+    "file": "page-templates\\projects.php"
+  },
+  "p2_badge": {
+    "text": "بنتهاوس بانورامي &bull; أبراج العليا",
+    "file": "page-templates\\projects.php"
+  },
+  "p2_mats": {
+    "text": "بلوط مدخن &bull; زجاج ذكي",
+    "file": "page-templates\\projects.php"
+  },
+  "p3_badge": {
+    "text": "فيلا معمارية &bull; حي النرجس",
+    "file": "page-templates\\projects.php"
+  },
+  "p3_mats": {
+    "text": "ترافرتين روماني &bull; فناء مائي",
+    "file": "page-templates\\projects.php"
+  },
+  "p4_badge": {
+    "text": "بافيليون ضيافة خاص &bull; الدرعية",
+    "file": "page-templates\\projects.php"
+  },
+  "p4_mats": {
+    "text": "خشب جوز معتق &bull; حجر نجد المنحوت",
+    "file": "page-templates\\projects.php"
+  },
+  "p5_badge": {
+    "text": "قصر خاص &bull; الخزامى",
+    "file": "page-templates\\projects.php"
+  },
+  "p5_mats": {
+    "text": "عزل صوتي فندقي &bull; حدائق عمودية",
+    "file": "page-templates\\projects.php"
+  },
+  "p6_badge": {
+    "text": "فيلا خاصة &bull; الياسمين",
+    "file": "page-templates\\projects.php"
+  },
+  "p6_mats": {
+    "text": "رخام ستاتوريو &bull; إضاءة فجر وليل ذكية",
+    "file": "page-templates\\projects.php"
+  },
+  "p1_list_meta": {
+    "text": "2025 &bull; تسليم مفتاح كامل",
+    "file": "page-templates\\projects.php"
+  },
+  "p2_list_meta": {
+    "text": "2025 &bull; تسليم مفتاح كامل",
+    "file": "page-templates\\projects.php"
+  },
+  "p3_list_meta": {
+    "text": "2024 &bull; تسليم مفتاح كامل",
+    "file": "page-templates\\projects.php"
+  },
+  "p4_list_meta": {
+    "text": "2024 &bull; تسليم مفتاح كامل",
+    "file": "page-templates\\projects.php"
+  },
+  "p5_list_meta": {
+    "text": "2023 &bull; تسليم مفتاح كامل",
+    "file": "page-templates\\projects.php"
+  },
+  "p6_list_meta": {
+    "text": "2023 &bull; تسليم مفتاح كامل",
+    "file": "page-templates\\projects.php"
+  },
+  "footer_copyright": {
+    "text": "جميع الحقوق محفوظة &copy; 2026 إنتيريور للعمارة والتشطيب الفاخر.",
+    "file": "parts\\footer.html"
+  },
+  "footer_hq_desc": {
+    "text": "طريق الملك فهد، العليا، الرياض المملكة العربية السعودية contact@interior-luxury.com هاتف: +966 11 450 8800",
+    "file": "template-parts\\footer-luxury.php"
+  }
+}

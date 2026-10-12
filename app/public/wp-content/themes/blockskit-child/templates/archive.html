@@ -1,0 +1,25 @@
+<!-- wp:template-part {"slug":"header","theme":"blockskit-child","tagName":"header"} /-->
+
+<main class="luxe-archive" id="primary" role="main">
+	<div class="luxe-section luxe-section--ink" style="padding-top: clamp(8rem, 14vw, 12rem);">
+		<div class="luxe-container">
+			<span class="luxe-meta-latin" style="margin-bottom: 1rem;">COLLECTION</span>
+			<!-- wp:query-title {"type":"archive","className":"luxe-h1"} /-->
+			<div class="luxe-hairline" style="margin-block: 2.5rem;"></div>
+			<!-- wp:query {"queryId":1,"query":{"perPage":9,"pages":0,"offset":0,"postType":"project","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true}} -->
+			<div class="wp-block-query">
+				<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+				<div class="luxe-card">
+					<!-- wp:post-featured-image {"aspectRatio":"16/9"} /-->
+					<!-- wp:post-title {"isLink":true,"className":"luxe-h3","style":{"spacing":{"margin":{"top":"1.5rem"}}}} /-->
+					<!-- wp:post-excerpt /-->
+				</div>
+				<!-- /wp:post-template -->
+				<!-- wp:query-pagination /-->
+			</div>
+			<!-- /wp:query -->
+		</div>
+	</div>
+</main>
+
+<!-- wp:template-part {"slug":"footer","theme":"blockskit-child","tagName":"footer"} /-->

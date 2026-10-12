@@ -1,0 +1,739 @@
+/**
+ * INTERIOR Unified Typography & Bilingual Layout Engine
+ *
+ * UNIFIED FONTS:
+ * - Arabic: IBM Plex Sans Arabic (100% unified across headings, body, navigation, badges)
+ * - English: Plus Jakarta Sans (100% unified across headings, body, navigation, badges)
+ * - Technical / Data: DM Mono (coordinates, scales, numbers)
+ * - Scaled-down English typography scale for refined, elegant architectural balance.
+ *
+ * @package Blockskit_Child
+ */
+
+/* ==========================================================================
+   1. Header Language Switcher Widget
+   ========================================================================== */
+.luxe-lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(22, 21, 19, 0.6);
+  border: 1px solid var(--interior-hairline);
+  padding: 0.35rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: border-color 0.3s ease;
+}
+
+.luxe-lang-switcher:hover {
+  border-color: var(--interior-brass);
+}
+
+.luxe-lang-btn {
+  background: transparent;
+  border: none;
+  padding: 0.2rem 0.35rem;
+  color: var(--interior-text-muted);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.luxe-lang-btn:hover {
+  color: var(--interior-bone);
+}
+
+.luxe-lang-btn.is-active {
+  color: var(--interior-ink);
+  background: var(--interior-brass);
+  font-weight: 600;
+}
+
+.luxe-lang-divider {
+  color: var(--interior-hairline);
+  font-size: 10px;
+  user-select: none;
+}
+
+/* ==========================================================================
+   2. Strict English Mode (dir="ltr") — Unified Font: Plus Jakarta Sans
+      Scaled-Down, Sophisticated Architectural Proportions
+   ========================================================================== */
+html[dir="ltr"],
+[dir="ltr"] {
+  /* Unified English Typography Scale (Refined Quiet Luxury Proportions) */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  --font-serif: var(--font-heading) !important;
+  --font-sans: var(--font-body) !important;
+
+  --text-xs: 0.7rem;                                           /* 11.2px */
+  --text-sm: 0.78rem;                                          /* 12.5px */
+  --text-base: clamp(0.85rem, 0.82rem + 0.12vw, 0.92rem);    /* 13.6-14.7px */
+  --text-md: clamp(0.92rem, 0.88rem + 0.18vw, 1.02rem);       /* 14.7-16.3px */
+  --text-lg: clamp(1rem, 0.95rem + 0.25vw, 1.12rem);          /* 16-17.9px */
+  --text-xl: clamp(1.1rem, 1.02rem + 0.35vw, 1.25rem);        /* 17.6-20px */
+  --text-2xl: clamp(1.2rem, 1.1rem + 0.5vw, 1.45rem);         /* 19.2-23.2px */
+  --text-3xl: clamp(1.35rem, 1.2rem + 0.8vw, 1.75rem);        /* 21.6-28px */
+  --text-4xl: clamp(1.55rem, 1.35rem + 1.2vw, 2.15rem);       /* 24.8-34.4px */
+  --text-hero: clamp(1.85rem, 1.55rem + 1.5vw, 2.65rem);      /* 29.6-42.4px */
+
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Global Font Unification: Plus Jakarta Sans */
+html[dir="ltr"],
+html[dir="ltr"] body,
+body[dir="ltr"],
+[dir="ltr"] body,
+[dir="ltr"] {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  letter-spacing: -0.012em;
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Headings in English: Clean, Bold, Architectural Plus Jakarta Sans */
+[dir="ltr"] h1,
+[dir="ltr"] h2,
+[dir="ltr"] h3,
+[dir="ltr"] h4,
+[dir="ltr"] h5,
+[dir="ltr"] h6,
+[dir="ltr"] .luxe-hero__title,
+[dir="ltr"] .luxe-hero-title,
+[dir="ltr"] .luxe-brand-logo,
+[dir="ltr"] .luxe-heading,
+[dir="ltr"] .luxe-h1,
+[dir="ltr"] .luxe-h2,
+[dir="ltr"] .luxe-h3 {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+  text-align: left !important;
+  line-height: 1.25 !important;
+}
+
+/* Scaled-down Headings */
+[dir="ltr"] .luxe-hero__title,
+[dir="ltr"] .luxe-hero-title {
+  font-size: clamp(1.85rem, 1.55rem + 1.5vw, 2.65rem) !important;
+  line-height: 1.2 !important;
+  max-width: 25ch;
+  margin-bottom: 1.25rem !important;
+}
+
+[dir="ltr"] .luxe-hero__lead,
+[dir="ltr"] .luxe-hero-desc {
+  font-size: clamp(0.9rem, 0.86rem + 0.18vw, 1rem) !important;
+  line-height: 1.75 !important;
+  max-width: 56ch;
+  margin-bottom: 2.25rem !important;
+}
+
+[dir="ltr"] .luxe-monograph-hero__title {
+  font-size: clamp(1.55rem, 1.35rem + 1.2vw, 2.15rem) !important;
+  line-height: 1.22 !important;
+}
+
+[dir="ltr"] .luxe-monograph-hero__lead {
+  font-size: clamp(0.85rem, 0.82rem + 0.12vw, 0.92rem) !important;
+  line-height: 1.75 !important;
+}
+
+[dir="ltr"] .luxe-curtain-nav__title {
+  font-size: clamp(1.3rem, 1.15rem + 0.8vw, 1.85rem) !important;
+  line-height: 1.2 !important;
+}
+
+[dir="ltr"] .luxe-slider-val {
+  font-size: clamp(1.75rem, 1.5rem + 1vw, 2.45rem) !important;
+}
+
+[dir="ltr"] .luxe-manifesto-statement,
+[dir="ltr"] .luxe-manifesto__statement {
+  font-size: clamp(1.2rem, 1.05rem + 0.6vw, 1.55rem) !important;
+  line-height: 1.65 !important;
+}
+
+[dir="ltr"] .luxe-stat-card__value,
+[dir="ltr"] .luxe-stat-item h3 {
+  font-size: clamp(1.75rem, 1.5rem + 1vw, 2.45rem) !important;
+}
+
+[dir="ltr"] .luxe-404-code {
+  font-size: clamp(3.5rem, 3rem + 3vw, 5.5rem) !important;
+}
+
+[dir="ltr"] h1, [dir="ltr"] .luxe-h1 {
+  font-size: clamp(1.55rem, 1.35rem + 1.2vw, 2.15rem) !important;
+  line-height: 1.22 !important;
+}
+
+[dir="ltr"] h2, [dir="ltr"] .luxe-h2 {
+  font-size: clamp(1.35rem, 1.2rem + 0.8vw, 1.75rem) !important;
+  line-height: 1.26 !important;
+}
+
+[dir="ltr"] h3, [dir="ltr"] .luxe-h3 {
+  font-size: clamp(1.15rem, 1.05rem + 0.5vw, 1.4rem) !important;
+  line-height: 1.3 !important;
+}
+
+[dir="ltr"] h4, [dir="ltr"] .luxe-h4 {
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.18rem) !important;
+  line-height: 1.35 !important;
+}
+
+[dir="ltr"] p {
+  font-size: clamp(0.85rem, 0.82rem + 0.12vw, 0.92rem) !important;
+  line-height: 1.75 !important;
+}
+
+[dir="ltr"] .luxe-lead {
+  font-size: clamp(0.92rem, 0.88rem + 0.18vw, 1.02rem) !important;
+  line-height: 1.75 !important;
+}
+
+/* Brand and Sub-brand LTR */
+[dir="ltr"] .luxe-brand-logo {
+  font-weight: 700 !important;
+  font-size: 1.3rem !important;
+  letter-spacing: 0.04em !important;
+}
+
+[dir="ltr"] .luxe-accent-serif {
+  font-style: normal !important;
+  font-family: inherit !important;
+  color: var(--interior-brass-light) !important;
+  font-weight: 600 !important;
+}
+
+[dir="ltr"] .luxe-meta-latin,
+[dir="ltr"] .luxe-tag-latin {
+  font-family: var(--font-mono) !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase;
+  font-size: 10px !important;
+}
+
+/* Navigation & Button Typography LTR */
+[dir="ltr"] .luxe-nav-link {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.825rem !important;
+  letter-spacing: 0.02em !important;
+  font-weight: 400 !important;
+}
+
+[dir="ltr"] .luxe-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.825rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+}
+
+[dir="ltr"] svg text,
+[dir="ltr"] text {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif !important;
+}
+
+/* General Text & Content Alignment LTR */
+[dir="ltr"] p,
+[dir="ltr"] .luxe-hero__lead,
+[dir="ltr"] .luxe-hero__content,
+[dir="ltr"] .luxe-section__desc,
+[dir="ltr"] .luxe-manifesto-desc,
+[dir="ltr"] .luxe-story-desc,
+[dir="ltr"] .luxe-process-desc,
+[dir="ltr"] .luxe-cost-item-desc,
+[dir="ltr"] .luxe-faq-question,
+[dir="ltr"] .luxe-faq-answer,
+[dir="ltr"] .luxe-funnel-label,
+[dir="ltr"] .luxe-funnel-input,
+[dir="ltr"] .luxe-funnel-select,
+[dir="ltr"] .luxe-vault-desc,
+[dir="ltr"] .luxe-stat-card,
+[dir="ltr"] .luxe-team-meta,
+[dir="ltr"] .luxe-footer-col,
+[dir="ltr"] .luxe-footer-brand,
+[dir="ltr"] .luxe-material-desc {
+  text-align: left !important;
+}
+
+/* Preserving intentionally centered elements */
+[dir="ltr"] .text-center,
+[dir="ltr"] .luxe-text-center,
+[dir="ltr"] [style*="text-align: center"],
+[dir="ltr"] .luxe-preloader__brand,
+[dir="ltr"] .luxe-preloader__meta,
+[dir="ltr"] .luxe-stat-card__value,
+[dir="ltr"] .luxe-demo-footer,
+[dir="ltr"] .luxe-wizard-success {
+  text-align: center !important;
+}
+
+/* Header & Navigation LTR */
+[dir="ltr"] .luxe-header-inner {
+  flex-direction: row !important;
+}
+
+[dir="ltr"] .luxe-brand {
+  flex-direction: row !important;
+}
+
+[dir="ltr"] .luxe-nav {
+  margin: 0 auto !important;
+}
+
+[dir="ltr"] .luxe-header-actions {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Curtain Menu LTR */
+[dir="ltr"] .luxe-curtain-nav__item {
+  flex-direction: row !important;
+}
+
+[dir="ltr"] .luxe-curtain-nav__item:hover .luxe-curtain-nav__title {
+  transform: translateX(12px) !important;
+}
+
+/* Hero Section LTR */
+[dir="ltr"] .luxe-hero__content {
+  text-align: left !important;
+}
+
+[dir="ltr"] .luxe-hero__meta {
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+}
+
+[dir="ltr"] .luxe-hero__actions {
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+}
+
+[dir="ltr"] .luxe-hero__footer-inner {
+  flex-direction: row !important;
+}
+
+/* Reversal of Horizontal Runway and Flow */
+[dir="ltr"] .luxe-runway-viewport {
+  direction: ltr !important;
+}
+
+[dir="ltr"] .luxe-runway-track {
+  direction: ltr !important;
+}
+
+[dir="ltr"] .luxe-runway-item {
+  text-align: left !important;
+}
+
+[dir="ltr"] .luxe-runway-meta-row {
+  flex-direction: row !important;
+}
+
+/* From Line to Living (Pinned Scroll) LTR */
+[dir="ltr"] .luxe-story-grid {
+  direction: ltr !important;
+}
+
+[dir="ltr"] .luxe-story-details {
+  text-align: left !important;
+}
+
+[dir="ltr"] .luxe-story-indicator {
+  flex-direction: row !important;
+}
+
+[dir="ltr"] .luxe-story-deliverables {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+[dir="ltr"] .luxe-story-deliverables li {
+  text-align: left !important;
+  padding-left: 1.5rem !important;
+  padding-right: 0 !important;
+}
+
+[dir="ltr"] .luxe-story-deliverables li::before {
+  left: 0 !important;
+  right: auto !important;
+}
+
+/* Turnkey 6-Step Execution Protocol LTR */
+[dir="ltr"] .luxe-process-grid {
+  direction: ltr !important;
+}
+
+[dir="ltr"] .luxe-process-card {
+  text-align: left !important;
+}
+
+[dir="ltr"] .luxe-process-step-num {
+  text-align: left !important;
+  margin-right: auto !important;
+  margin-left: 0 !important;
+  font-family: var(--font-mono) !important;
+}
+
+/* Why We Cost More LTR */
+[dir="ltr"] .luxe-cost-grid {
+  direction: ltr !important;
+}
+
+[dir="ltr"] .luxe-cost-col {
+  text-align: left !important;
+}
+
+[dir="ltr"] .luxe-cost-list {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+[dir="ltr"] .luxe-cost-list li {
+  text-align: left !important;
+}
+
+/* 3-Stage Comparison Slider LTR */
+[dir="ltr"] .luxe-compare-header {
+  flex-direction: row !important;
+  text-align: left !important;
+}
+
+/* Qualification Funnel LTR */
+[dir="ltr"] .luxe-funnel-step {
+  text-align: left !important;
+}
+
+[dir="ltr"] .luxe-funnel-pills {
+  justify-content: flex-start !important;
+}
+
+[dir="ltr"] .luxe-funnel-actions {
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+}
+
+/* Private Brief Wizard & Atelier Desk LTR */
+[dir="ltr"] .luxe-wizard-card,
+[dir="ltr"] .luxe-wizard-form {
+  text-align: left !important;
+}
+
+[dir="ltr"] .luxe-city-pills {
+  justify-content: flex-start !important;
+}
+
+[dir="ltr"] .luxe-wizard-nav {
+  flex-direction: row !important;
+}
+
+[dir="ltr"] #luxe-wizard-summary-text {
+  text-align: left !important;
+}
+
+[dir="ltr"] .luxe-studio-desk-card,
+[dir="ltr"] .luxe-studio-desk-card div {
+  text-align: left !important;
+}
+
+/* Subpages Quotes & Cards LTR */
+[dir="ltr"] div[data-i18n="about_genesis_quote"],
+[dir="ltr"] div[data-i18n="app_phil_quote"],
+[dir="ltr"] blockquote {
+  border-left: 2px solid var(--interior-brass) !important;
+  border-right: none !important;
+  padding-left: 1.75rem !important;
+  padding-right: 0 !important;
+  text-align: left !important;
+  font-style: normal !important;
+}
+
+[dir="ltr"] .luxe-monograph-hero__content {
+  text-align: left !important;
+}
+
+[dir="ltr"] .luxe-service-pillar-card {
+  text-align: left !important;
+}
+
+[dir="ltr"] .luxe-service-pillar-header {
+  flex-direction: row !important;
+}
+
+[dir="ltr"] .luxe-award-row {
+  flex-direction: row !important;
+  text-align: left !important;
+}
+
+[dir="ltr"] .luxe-project-filter {
+  justify-content: flex-start !important;
+}
+
+[dir="ltr"] .luxe-project-card-meta,
+[dir="ltr"] .luxe-project-card,
+[dir="ltr"] .luxe-vault-info {
+  text-align: left !important;
+}
+
+[dir="ltr"] .luxe-faq-header {
+  flex-direction: row !important;
+  text-align: left !important;
+}
+
+[dir="ltr"] .luxe-footer-grid {
+  direction: ltr !important;
+}
+
+[dir="ltr"] .luxe-footer-col {
+  text-align: left !important;
+}
+
+[dir="ltr"] .luxe-footer-links {
+  text-align: left !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+[dir="ltr"] .luxe-footer-bottom {
+  flex-direction: row !important;
+}
+
+/* Flip Directional Arrow Glyphs */
+[dir="ltr"] .luxe-arrow-next::before {
+  content: "→";
+}
+
+[dir="rtl"] .luxe-arrow-next::before {
+  content: "←";
+}
+
+[dir="ltr"] .luxe-arrow-icon {
+  display: inline-block !important;
+  transform: scaleX(-1) !important;
+  transform-origin: center center;
+  margin-left: 0.5rem !important;
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .luxe-arrow-icon {
+  display: inline-block !important;
+  transform: none !important;
+  margin-right: 0.5rem !important;
+  margin-left: 0 !important;
+}
+
+/* Mobile Action Bar LTR */
+[dir="ltr"] .luxe-mobile-action-bar {
+  direction: ltr !important;
+}
+
+/* Floating WhatsApp Button LTR */
+[dir="ltr"] .luxe-whatsapp-float,
+[dir="ltr"] .luxe-whatsapp-pill {
+  left: auto !important;
+  right: 2.25rem !important;
+}
+
+[dir="rtl"] .luxe-whatsapp-float,
+[dir="rtl"] .luxe-whatsapp-pill {
+  right: auto !important;
+  left: 2.25rem !important;
+}
+
+/* Demo Toolbar LTR */
+[dir="ltr"] .luxe-demo-toolbar,
+[dir="ltr"] .luxe-demo-modal {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+[dir="ltr"] .luxe-demo-input {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* ==========================================================================
+   3. Strict Arabic Mode (dir="rtl") — Unified Font: IBM Plex Sans Arabic
+      100% Cohesive Architectural Sans Identity & Scaled Proportions
+   ========================================================================== */
+html[dir="rtl"],
+[dir="rtl"] {
+  --font-heading: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  --font-body: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  --font-serif: var(--font-heading) !important;
+  --font-sans: var(--font-body) !important;
+
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+html[dir="rtl"],
+html[dir="rtl"] body,
+body[dir="rtl"],
+[dir="rtl"] body,
+[dir="rtl"] {
+  font-family: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  direction: rtl !important;
+  text-align: right !important;
+  letter-spacing: normal !important;
+}
+
+/* All Headings in Arabic: IBM Plex Sans Arabic SemiBold */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6,
+[dir="rtl"] .luxe-hero__title,
+[dir="rtl"] .luxe-hero-title,
+[dir="rtl"] .luxe-brand-logo,
+[dir="rtl"] .luxe-heading,
+[dir="rtl"] .luxe-h1,
+[dir="rtl"] .luxe-h2,
+[dir="rtl"] .luxe-h3 {
+  font-family: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: normal !important;
+  word-spacing: normal;
+  text-align: right !important;
+  line-height: 1.25 !important;
+}
+
+/* Scaled-down Headings & Elements in Arabic */
+[dir="rtl"] .luxe-hero__title,
+[dir="rtl"] .luxe-hero-title {
+  font-size: clamp(1.95rem, 1.65rem + 1.6vw, 2.85rem) !important;
+  line-height: 1.25 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+[dir="rtl"] .luxe-hero__lead,
+[dir="rtl"] .luxe-hero-desc {
+  font-size: clamp(0.95rem, 0.9rem + 0.22vw, 1.05rem) !important;
+  line-height: 1.85 !important;
+  margin-bottom: 2.25rem !important;
+}
+
+[dir="rtl"] .luxe-monograph-hero__title {
+  font-size: clamp(1.65rem, 1.45rem + 1.3vw, 2.35rem) !important;
+  line-height: 1.24 !important;
+}
+
+[dir="rtl"] .luxe-monograph-hero__lead {
+  font-size: clamp(0.875rem, 0.84rem + 0.18vw, 0.95rem) !important;
+  line-height: 1.8 !important;
+}
+
+[dir="rtl"] .luxe-curtain-nav__title {
+  font-size: clamp(1.35rem, 1.2rem + 0.8vw, 1.95rem) !important;
+  line-height: 1.25 !important;
+}
+
+[dir="rtl"] .luxe-slider-val {
+  font-size: clamp(1.85rem, 1.6rem + 1.2vw, 2.65rem) !important;
+}
+
+[dir="rtl"] .luxe-manifesto-statement,
+[dir="rtl"] .luxe-manifesto__statement {
+  font-size: clamp(1.25rem, 1.1rem + 0.7vw, 1.65rem) !important;
+  line-height: 1.6 !important;
+}
+
+[dir="rtl"] .luxe-stat-card__value,
+[dir="rtl"] .luxe-stat-item h3 {
+  font-size: clamp(1.85rem, 1.6rem + 1.2vw, 2.65rem) !important;
+}
+
+[dir="rtl"] .luxe-404-code {
+  font-size: clamp(3.5rem, 3rem + 3vw, 5.5rem) !important;
+}
+
+[dir="rtl"] h1, [dir="rtl"] .luxe-h1 {
+  font-size: clamp(1.65rem, 1.45rem + 1.3vw, 2.35rem) !important;
+  line-height: 1.24 !important;
+}
+
+[dir="rtl"] h2, [dir="rtl"] .luxe-h2 {
+  font-size: clamp(1.4rem, 1.25rem + 0.9vw, 1.85rem) !important;
+  line-height: 1.28 !important;
+}
+
+[dir="rtl"] h3, [dir="rtl"] .luxe-h3 {
+  font-size: clamp(1.2rem, 1.1rem + 0.55vw, 1.5rem) !important;
+  line-height: 1.32 !important;
+}
+
+[dir="rtl"] h4, [dir="rtl"] .luxe-h4 {
+  font-size: clamp(1.05rem, 0.98rem + 0.35vw, 1.25rem) !important;
+  line-height: 1.36 !important;
+}
+
+[dir="rtl"] p {
+  font-size: clamp(0.875rem, 0.84rem + 0.18vw, 0.95rem) !important;
+  line-height: 1.8 !important;
+}
+
+[dir="rtl"] .luxe-lead {
+  font-size: clamp(0.95rem, 0.9rem + 0.22vw, 1.05rem) !important;
+  line-height: 1.85 !important;
+}
+
+[dir="rtl"] .luxe-brand-logo {
+  font-weight: 700 !important;
+  font-size: 1.35rem !important;
+}
+
+/* Arabic Body, Paragraphs & Lists: IBM Plex Sans Arabic Regular */
+[dir="rtl"] p,
+[dir="rtl"] li,
+[dir="rtl"] .luxe-section__desc,
+[dir="rtl"] .luxe-manifesto-desc,
+[dir="rtl"] .luxe-story-desc,
+[dir="rtl"] .luxe-process-desc,
+[dir="rtl"] .luxe-cost-item-desc {
+  font-family: 'IBM Plex Sans Arabic', -apple-system, sans-serif !important;
+  font-weight: 400 !important;
+  line-height: 1.8 !important;
+  letter-spacing: normal !important;
+}
+
+[dir="rtl"] .luxe-nav-link,
+[dir="rtl"] .luxe-btn {
+  font-family: 'IBM Plex Sans Arabic', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 0.8125rem !important;
+}
+
+[dir="rtl"] .luxe-accent-serif {
+  font-family: inherit !important;
+  font-style: normal !important;
+  color: var(--interior-brass-light) !important;
+  font-weight: 600 !important;
+}
+
+[dir="rtl"] blockquote {
+  border-right: 2px solid var(--interior-brass) !important;
+  border-left: none !important;
+  padding-right: 1.5rem !important;
+  padding-left: 0 !important;
+}
+
+[dir="rtl"] svg text,
+[dir="rtl"] text {
+  font-family: 'IBM Plex Sans Arabic', -apple-system, sans-serif !important;
+}

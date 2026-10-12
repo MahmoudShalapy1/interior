@@ -1,0 +1,102 @@
+============================================================
+AUDITING ALL RENDERED PAGES FOR ZERO-LEAK BILINGUAL PURITY
+============================================================
+
+--- Page: Home (/) ---
+  [AR Mode] English words detected: 0
+  [EN Mode] Arabic text fragments remaining: 35
+    ! Arabic text: 'إنتيريور — من الخط إلى المكان | عمارة وتنفيذ القصور الفاخرة بالرياض'
+    ! Arabic text: 'إنتيريور — من الخط إلى المكان | عمارة وتنفيذ القصور الفاخرة بالرياض'
+    ! Arabic text: 'تخطى إلى المحتوى'
+    ! Arabic text: 'طريق الملك فهد، برج العليا'
+    ! Arabic text: 'مكتب المراسلات المعتمد'
+    ! Arabic text: 'جلسات استشارية بخصوصية مطلقة'
+    ! Arabic text: 'تتجاوز'
+    ! Arabic text: 'المألوف.'
+    ! Arabic text: 'لا'
+    ! Arabic text: 'نزيّن'
+
+--- Page: About (/about) ---
+  [AR Mode] English words detected: 0
+  [EN Mode] Arabic text fragments remaining: 18
+    ! Arabic text: 'عن الاستوديو والمونوغراف المعماري — إنتيريور'
+    ! Arabic text: 'عن الاستوديو والمونوغراف المعماري — إنتيريور'
+    ! Arabic text: 'طريق الملك فهد، برج العليا'
+    ! Arabic text: 'مكتب المراسلات المعتمد'
+    ! Arabic text: 'جلسات استشارية بخصوصية مطلقة'
+    ! Arabic text: 'الصنعة المعمارية'
+    ! Arabic text: 'والسيادة المكانية.'
+    ! Arabic text: 'تشتت المقاولات'
+    ! Arabic text: 'في المشاريع الكبرى'
+    ! Arabic text: 'نخطه ونبنيه'
+
+--- Page: Services (/services) ---
+  [AR Mode] English words detected: 0
+  [EN Mode] Arabic text fragments remaining: 16
+    ! Arabic text: 'منظومة الخدمات والسيادة الكاملة — إنتيريور'
+    ! Arabic text: 'منظومة الخدمات والسيادة الكاملة — إنتيريور'
+    ! Arabic text: 'طريق الملك فهد، برج العليا'
+    ! Arabic text: 'مكتب المراسلات المعتمد'
+    ! Arabic text: 'جلسات استشارية بخصوصية مطلقة'
+    ! Arabic text: 'تسليم المفتاح'
+    ! Arabic text: 'السيادي.'
+    ! Arabic text: 'العمارة الخالدة'
+    ! Arabic text: 'ولماذا يوفر عليك ثروة'
+    ! Arabic text: 'تساؤلات الاستثمار'
+
+--- Page: Approach (/approach) ---
+  [AR Mode] English words detected: 0
+  [EN Mode] Arabic text fragments remaining: 17
+    ! Arabic text: 'المنهج التنفيذي وحوكمة الاستثمار — إنتيريور'
+    ! Arabic text: 'المنهج التنفيذي وحوكمة الاستثمار — إنتيريور'
+    ! Arabic text: 'طريق الملك فهد، برج العليا'
+    ! Arabic text: 'مكتب المراسلات المعتمد'
+    ! Arabic text: 'جلسات استشارية بخصوصية مطلقة'
+    ! Arabic text: 'المسؤولية الكاملة'
+    ! Arabic text: 'وليس مجرد الديكور.'
+    ! Arabic text: 'تجزئة المقاولات'
+    ! Arabic text: 'في القصور الكبرى؟'
+    ! Arabic text: 'مع الاستوديو'
+
+--- Page: Projects (/projects) ---
+  [AR Mode] English words detected: 0
+  [EN Mode] Arabic text fragments remaining: 13
+    ! Arabic text: 'أرشيف المشاريع والقصور المنفذة — إنتيريور'
+    ! Arabic text: 'أرشيف المشاريع والقصور المنفذة — إنتيريور'
+    ! Arabic text: 'طريق الملك فهد، برج العليا'
+    ! Arabic text: 'مكتب المراسلات المعتمد'
+    ! Arabic text: 'جلسات استشارية بخصوصية مطلقة'
+    ! Arabic text: 'التحف المعمارية'
+    ! Arabic text: 'والقصور السيادية.'
+    ! Arabic text: 'أرشيف المشاريع السرية'
+    ! Arabic text: '؟'
+    ! Arabic text: 'المملكة العربية السعودية'
+
+--- Page: Contact (/contact) ---
+  [AR Mode] English words detected: 0
+  [EN Mode] Arabic text fragments remaining: 11
+    ! Arabic text: 'الملف الخاص وبدء دراسة المشروع — إنتيريور'
+    ! Arabic text: 'الملف الخاص وبدء دراسة المشروع — إنتيريور'
+    ! Arabic text: 'طريق الملك فهد، برج العليا'
+    ! Arabic text: 'مكتب المراسلات المعتمد'
+    ! Arabic text: 'جلسات استشارية بخصوصية مطلقة'
+    ! Arabic text: 'وبروتوكول الاعتماد'
+    ! Arabic text: 'المعماري.'
+    ! Arabic text: 'المملكة العربية السعودية'
+    ! Arabic text: 'مراسلات الاستوديو: متاحة عبر الملف الخاص المعتمد'
+    ! Arabic text: 'هاتف: +٩٦٦ ١١ ٤٥٠ ٨٨٠٠'
+
+--- Page: 404 (/non-existent-404) ---
+  [AR Mode] English words detected: 0
+  [EN Mode] Arabic text fragments remaining: 7
+    ! Arabic text: 'إنتيريور — استوديو العمارة والتنفيذ الفاخر'
+    ! Arabic text: 'هذا الفراغ لم يتم تخطيطه بعد — إنتيريور'
+    ! Arabic text: 'تخطى إلى المحتوى'
+    ! Arabic text: 'طريق الملك فهد، برج العليا'
+    ! Arabic text: 'مكتب المراسلات المعتمد'
+    ! Arabic text: 'جلسات استشارية بخصوصية مطلقة'
+    ! Arabic text: 'لم يتم تخطيطه بعد'
+
+============================================================
+AUDIT COMPLETED
+============================================================

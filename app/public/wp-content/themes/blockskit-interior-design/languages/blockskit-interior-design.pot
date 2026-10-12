@@ -1,0 +1,465 @@
+# Translation of blockskit-interior-design in Blockskit Interior Design
+# This file is distributed under the same license as the Blockskit Interior Design package.
+msgid ""
+msgstr ""
+"Project-Id-Version: blockskit-interior-design\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/blockskit-interior-design\n"
+"POT-Creation-Date: 2026-07-23T10:27:21+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: blockskit-manager\n"
+"X-Domain: blockskit-interior-design\n"
+
+#: functions.php:48
+msgid "Theme Patterns"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\footer.php:19
+msgid "Nisl libero ullamcorper id ipsum viverra mauris non pellentesque placerat lorem lacinia sagittis non pretium."
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\footer.php:37
+msgid "Products"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\footer.php:53
+msgid "Company"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\footer.php:73
+msgid "Resources"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\footer.php:89
+msgid "Support"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\footer.php:108
+msgid "Copyright © 2026 ·"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\footer.php:114
+msgid "· All rights reserved"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\header.php:35
+msgid "Get Started"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-about.php:28
+msgid "SINCE 1985"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-about.php:34
+msgid "Interiors, Our Dual"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-about.php:34
+msgid "Expertise"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-about.php:59
+msgid "Company Story"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-about.php:63
+msgid "test"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-about.php:63
+#: patterns\home-about.php:89
+msgid "Sapien lacus ducimus varius animi dolore enim ullamcorper conva"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-about.php:68
+#: patterns\home-about.php:94
+msgid "Read More.."
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-about.php:85
+msgid "Our Promises"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-about.php:111
+msgid "Years of Interior Design Perfection"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-about.php:116
+msgid "20"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-about.php:131
+msgid "Euismod rhoncus voluptatem eget purus lacus ridiculus maiores et auctor, sociosqu felis facilisis pharetra vestibulum amet. Ullamcorper sapien vitae esse rem non erat adipisci tempora tristique laudantiu."
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-about.php:137
+msgid "More About Us"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-about.php:150
+msgid "24*7 HELPLINE FOR YOU :"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-about.php:154
+msgid "+472 256 789 225"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-achievement.php:13
+msgid "20+"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-achievement.php:18
+msgid "Years Experience"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-achievement.php:22
+#: patterns\home-achievement.php:38
+#: patterns\home-achievement.php:54
+#: patterns\home-achievement.php:70
+msgid "Iure nunc maecenas proin ipsa etiam accusamus se."
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-achievement.php:29
+msgid "4k+"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-achievement.php:34
+msgid "Projects Completed"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-achievement.php:45
+msgid "138+"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-achievement.php:50
+msgid "Skilled Members"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-achievement.php:61
+msgid "18k+"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-achievement.php:66
+msgid "Client Satsifaction"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-hero-banner.php:23
+msgid "TRUSTED DESIGN PARTNER"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-hero-banner.php:30
+msgid "Creative Stunning"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-hero-banner.php:30
+msgid "Inspired Interior Design"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-hero-banner.php:34
+#: patterns\home-latest-posts.php:62
+msgid "Sapien lacus ducimus varius animi dolore enim ullamcorper convallis assumenda aliqua autem rutrum quae. Aute quos, velit phasellus molestiae, erat."
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-hero-banner.php:40
+msgid "Get Started Now"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-hero-banner.php:44
+msgid "Take Counsel"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-hero-banner.php:57
+msgid "01."
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-hero-banner.php:62
+msgid "Creative Concepts"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-hero-banner.php:66
+#: patterns\home-hero-banner.php:82
+#: patterns\home-hero-banner.php:98
+#: patterns\home-services.php:66
+#: patterns\home-services.php:98
+#: patterns\home-services.php:130
+#: patterns\home-services.php:162
+msgid "Tempore bibendum nullam, nec, sociis quo. Class eiusmod, eu odit."
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-hero-banner.php:73
+msgid "02."
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-hero-banner.php:78
+msgid "Elegant Interiors"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-hero-banner.php:89
+msgid "03."
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-hero-banner.php:94
+msgid "Bold Architecture"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-latest-posts.php:52
+msgid "STRAIGHT FROM NEWSROOM"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-latest-posts.php:58
+msgid "Our Latest Blog"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-latest-posts.php:58
+msgid "&amp; Articles"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-latest-posts.php:67
+msgid "Explore All Blogs"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-services.php:20
+msgid "OUR EXPERTISE / SERVICES"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-services.php:26
+msgid "Perfect Pieces To Complete"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-services.php:26
+msgid "Your Space"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-services.php:39
+msgid "Sapien lacus ducimus varius animi dolore enim ullamcorper convallis assumenda aliqua autem rutrum quae sellus, erat."
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-services.php:62
+msgid "Resident Interior Design"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-services.php:72
+#: patterns\home-services.php:104
+#: patterns\home-services.php:136
+#: patterns\home-services.php:168
+msgid "Learn More.."
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-services.php:94
+msgid "Commercial Design"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-services.php:126
+msgid "Space Plan &amp; Layout"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\home-services.php:158
+msgid "Architecture Work"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\template-404.php:23
+msgid "This page could not be found. Maybe try a search?"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\template-cart.php:26
+#: patterns\template-cart.php:89
+#: patterns\template-cart.php:152
+msgid "You may be interested in…"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\template-cart.php:208
+msgid "Your cart is currently empty!"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\template-cart.php:212
+msgid "Browse store"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\template-cart.php:220
+msgid "New in store"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\template-order-confirmation.php:22
+msgid "Order Confirmation"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\template-order-confirmation.php:40
+msgid "Order details"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\template-order-confirmation.php:48
+msgid "Downloads"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\template-order-confirmation.php:58
+msgid "Shipping address"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\template-order-confirmation.php:68
+msgid "Billing address"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\template-product-search-results.php:48
+msgid "No products were found matching your selection."
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\template-search.php:50
+msgid "Sorry, but nothing matched your search terms. Try another search?"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\template-single-product.php:15
+msgid "Single Product"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns\template-single-product.php:57
+msgid "Related products"
+msgid_plural "blockskit-interior-design"
+msgstr[0] ""
+msgstr[1] ""
+

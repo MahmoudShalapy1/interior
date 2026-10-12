@@ -1,0 +1,21 @@
+<!-- wp:template-part {"slug":"header","theme":"blockskit-child","tagName":"header"} /-->
+
+<main class="luxe-main" id="primary" role="main">
+	<!-- wp:pattern {"slug":"blockskit-child/hero-reveal"} /-->
+	<!-- wp:pattern {"slug":"blockskit-child/statement-manifesto"} /-->
+	<!-- wp:pattern {"slug":"blockskit-child/line-to-living"} /-->
+	<!-- wp:pattern {"slug":"blockskit-child/stats-scale"} /-->
+	<!-- wp:pattern {"slug":"blockskit-child/confidential-vault"} /-->
+	<!-- wp:pattern {"slug":"blockskit-child/horizontal-runway"} /-->
+	<!-- wp:pattern {"slug":"blockskit-child/light-study"} /-->
+	<!-- wp:pattern {"slug":"blockskit-child/before-after-stage"} /-->
+	<!-- wp:pattern {"slug":"blockskit-child/services-pillars"} /-->
+	<!-- wp:pattern {"slug":"blockskit-child/material-provenance"} /-->
+	<!-- wp:pattern {"slug":"blockskit-child/why-cost-more"} /-->
+	<!-- wp:pattern {"slug":"blockskit-child/execution-process"} /-->
+	<!-- wp:pattern {"slug":"blockskit-child/capacity-limit"} /-->
+	<!-- wp:pattern {"slug":"blockskit-child/qualification-funnel"} /-->
+	<!-- wp:post-content {"layout":{"type":"default"}} /-->
+</main>
+
+<!-- wp:template-part {"slug":"footer","theme":"blockskit-child","tagName":"footer"} /-->

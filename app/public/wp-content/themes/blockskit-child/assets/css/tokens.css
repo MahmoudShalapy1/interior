@@ -1,0 +1,155 @@
+/**
+ * INTERIOR Architectural Design Tokens
+ * Single Source of Truth Mirroring theme.json
+ *
+ * @package Blockskit_Child
+ */
+
+:root {
+  /* 1. Core Architectural Palette */
+  --interior-ink: #0D0C0A;
+  --interior-charcoal: #161513;
+  --interior-charcoal-light: #201E1A;
+  --interior-limestone: #ECE6DA;
+  --interior-limestone-muted: #D8D2C5;
+  --interior-bone: #F6F2EA;
+  --interior-brass: #B59A6A;
+  --interior-brass-light: #D4B996;
+  --interior-brass-glow: rgba(181, 154, 106, 0.12);
+  --interior-hairline: rgba(181, 154, 106, 0.15);
+  --interior-hairline-dark: rgba(13, 12, 10, 0.12);
+  --interior-text-light: #F6F2EA;
+  --interior-text-dark: #0D0C0A;
+  --interior-text-muted: #8E8A82;
+
+  /* 2. Semantic Surface & Contrast Tokens */
+  --bg-primary: var(--interior-ink);
+  --bg-surface: var(--interior-charcoal);
+  --bg-surface-elevated: var(--interior-charcoal-light);
+  --text-primary: var(--interior-bone);
+  --text-secondary: var(--interior-text-muted);
+  --text-accent: var(--interior-brass-light);
+  --border-subtle: var(--interior-hairline);
+}
+
+/* Atmosphere Preset 2: Limestone Light (Section 12 White-Label Preset) */
+[data-theme="limestone"] {
+  --interior-ink: #F7F4EE;
+  --interior-charcoal: #EFEBE2;
+  --interior-charcoal-light: #E5DFD4;
+  --interior-limestone: #E5DFD3;
+  --interior-limestone-muted: #D2CBC0;
+  --interior-bone: #1A1916;
+  --interior-brass: #8C6D3F;
+  --interior-brass-light: #A88652;
+  --interior-brass-glow: rgba(140, 109, 63, 0.15);
+  --interior-hairline: rgba(140, 109, 63, 0.22);
+  --interior-hairline-dark: rgba(26, 25, 22, 0.15);
+  --interior-text-light: #1A1916;
+  --interior-text-dark: #1A1916;
+  --interior-text-muted: #6B665D;
+
+  --bg-primary: var(--interior-ink);
+  --bg-surface: var(--interior-charcoal);
+  --bg-surface-elevated: var(--interior-charcoal-light);
+  --text-primary: var(--interior-bone);
+  --text-secondary: var(--interior-text-muted);
+  --text-accent: var(--interior-brass);
+  --border-subtle: var(--interior-hairline);
+}
+
+/* Atmosphere Preset 3: Bronze Gulf (Section 12 White-Label Preset) */
+[data-theme="bronze"] {
+  --interior-ink: #120E0A;
+  --interior-charcoal: #1C1712;
+  --interior-charcoal-light: #28211A;
+  --interior-limestone: #ECE6DA;
+  --interior-limestone-muted: #D8D2C5;
+  --interior-bone: #F7F0E6;
+  --interior-brass: #C8A26A;
+  --interior-brass-light: #DFC08C;
+  --interior-brass-glow: rgba(200, 162, 106, 0.15);
+  --interior-hairline: rgba(200, 162, 106, 0.2);
+  --interior-hairline-dark: rgba(18, 14, 10, 0.15);
+  --interior-text-light: #F7F0E6;
+  --interior-text-dark: #120E0A;
+  --interior-text-muted: #A09486;
+
+  --bg-primary: var(--interior-ink);
+  --bg-surface: var(--interior-charcoal);
+  --bg-surface-elevated: var(--interior-charcoal-light);
+  --text-primary: var(--interior-bone);
+  --text-secondary: var(--interior-text-muted);
+  --text-accent: var(--interior-brass-light);
+  --border-subtle: var(--interior-hairline);
+}
+
+:root {
+
+  /* 3. Typography Families */
+  --font-heading: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-latin: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'DM Mono', 'SFMono-Regular', Consolas, monospace;
+  --font-serif: var(--font-heading);
+  --font-sans: var(--font-body);
+
+  /* 4. Modular Scale & Fluid Type (Quiet Luxury Architectural Proportions) */
+  --text-xs: clamp(0.7rem, 0.68rem + 0.15vw, 0.75rem);        /* 11.2-12px */
+  --text-sm: clamp(0.78rem, 0.75rem + 0.18vw, 0.84rem);       /* 12.5-13.5px */
+  --text-base: clamp(0.875rem, 0.84rem + 0.18vw, 0.95rem);    /* 14-15.2px */
+  --text-md: clamp(0.95rem, 0.9rem + 0.22vw, 1.05rem);        /* 15.2-16.8px */
+  --text-lg: clamp(1.05rem, 0.98rem + 0.32vw, 1.18rem);       /* 16.8-18.9px */
+  --text-xl: clamp(1.15rem, 1.05rem + 0.45vw, 1.35rem);       /* 18.4-21.6px */
+  --text-2xl: clamp(1.25rem, 1.15rem + 0.7vw, 1.55rem);       /* 20-24.8px */
+  --text-3xl: clamp(1.45rem, 1.3rem + 1vw, 1.95rem);          /* 23.2-31.2px */
+  --text-4xl: clamp(1.75rem, 1.5rem + 1.4vw, 2.45rem);        /* 28-39.2px */
+  --text-hero: clamp(2rem, 1.65rem + 1.8vw, 3.15rem);         /* 32-50.4px */
+
+  /* 5. Architectural Vertical Rhythm & Spacing */
+  --space-unit: 8px;
+  --space-3xs: 0.25rem;   /* 4px */
+  --space-2xs: 0.5rem;    /* 8px */
+  --space-xs: 0.75rem;    /* 12px */
+  --space-sm: 1rem;       /* 16px */
+  --space-md: 1.5rem;     /* 24px */
+  --space-lg: 2.5rem;     /* 40px */
+  --space-xl: 4rem;       /* 64px */
+  --space-2xl: 6rem;      /* 96px */
+  --space-3xl: 8rem;      /* 128px */
+  --section-gutter: clamp(4.5rem, 8vw, 9.5rem);
+
+  /* 6. Layout Containers */
+  --container-max: 1240px;
+  --container-wide: 1520px;
+  --container-gutter: clamp(1.25rem, 4vw, 3.5rem);
+
+  /* 7. Elevation, Transitions & Z-Index */
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --transition-slow: 0.75s var(--ease-editorial);
+  --transition-normal: 0.4s var(--ease-editorial);
+  --transition-fast: 0.2s ease-out;
+
+  --z-base: 1;
+  --z-elevated: 10;
+  --z-sticky: 100;
+  --z-overlay: 500;
+  --z-modal: 1000;
+  --z-cursor: 9999;
+
+  /* 8. White-Label Geometry & Motion Tokens (Section 14 & Phase 11) */
+  --radius-subtle: 0px;
+  --motion-pace-multiplier: 1;
+}
+
+[data-radius="soft"] {
+  --radius-subtle: 4px;
+}
+
+[data-motion="fast"] {
+  --motion-pace-multiplier: 0.6;
+  --transition-slow: 0.45s var(--ease-editorial);
+  --transition-normal: 0.25s var(--ease-editorial);
+}
+

@@ -1,0 +1,106 @@
+<!-- wp:group {"tagName":"header","className":"luxe-header","layout":{"type":"default"}} -->
+<header class="luxe-header" role="banner">
+	<div class="luxe-container luxe-header-inner">
+		<a href="/" class="luxe-brand" aria-label="إنتيريور — العمارة والتنفيذ السيادي">
+			<span class="luxe-brand-logo" data-i18n="brand_logo">إنتيريور</span>
+			<span class="luxe-meta-latin" data-i18n="brand_sub">العمارة السيادية</span>
+		</a>
+
+		<nav class="luxe-nav" aria-label="التنقل الرئيسي">
+			<a href="/" class="luxe-nav-link" data-i18n="nav_home">الرئيسية</a>
+			<a href="/about/" class="luxe-nav-link" data-i18n="nav_about">عن الاستوديو</a>
+			<a href="/services/" class="luxe-nav-link" data-i18n="nav_services">منظومة الخدمات</a>
+			<a href="/approach/" class="luxe-nav-link" data-i18n="nav_approach">المنهج والاستثمار</a>
+			<a href="/projects/" class="luxe-nav-link" data-i18n="nav_projects">أرشيف المشاريع</a>
+			<a href="/contact/" class="luxe-nav-link" data-i18n="nav_contact">الملف الخاص</a>
+		</nav>
+
+		<!-- Header Actions: CTA + Language Switcher + Menu Button -->
+		<div class="luxe-header-actions" style="display: flex; align-items: center; gap: 0.85rem;">
+			<a href="/#funnel" class="luxe-btn luxe-btn--ghost luxe-header-cta" data-i18n="nav_cta" style="padding: 0.55rem 1.35rem; font-size: 0.825rem; white-space: nowrap;">حجز استشارة خاصة</a>
+			<div class="luxe-lang-switcher" aria-label="تبديل لغة الموقع">
+				<button type="button" class="luxe-lang-btn is-active" data-lang="ar" data-i18n="lang_btn_ar" aria-label="اللغة العربية">عربي</button>
+				<span class="luxe-lang-divider">/</span>
+				<button type="button" class="luxe-lang-btn" data-lang="en" data-i18n="lang_btn_en" aria-label="النسخة الإنجليزية">الإنجليزية</button>
+			</div>
+
+			<!-- Architectural Menu Button (Two Clean Lines) -->
+			<button type="button" class="luxe-mobile-toggle" id="luxe-menu-trigger" aria-label="فتح القائمة المعمارية" aria-expanded="false">
+				<span style="display:block; width:20px; height:1.5px; background:currentColor; margin-bottom:5px;"></span>
+				<span style="display:block; width:14px; height:1.5px; background:currentColor;"></span>
+			</button>
+		</div>
+	</div>
+
+	<!-- Fullscreen Curtain Architectural Menu -->
+	<div class="luxe-curtain-menu" id="luxe-curtain-menu" role="dialog" aria-modal="true" aria-label="القائمة التحريرية الكاملة">
+		<div class="luxe-curtain-menu__header">
+			<div class="luxe-meta-latin" data-i18n="curtain_header">فهرس المونوغراف المعماري</div>
+			<div style="display: flex; align-items: center; gap: 1rem;">
+				<div class="luxe-lang-switcher" aria-label="تبديل لغة الموقع">
+					<button type="button" class="luxe-lang-btn is-active" data-lang="ar" data-i18n="lang_btn_ar">عربي</button>
+					<span class="luxe-lang-divider">/</span>
+					<button type="button" class="luxe-lang-btn" data-lang="en" data-i18n="lang_btn_en">الإنجليزية</button>
+				</div>
+				<button type="button" class="luxe-curtain-menu__close" aria-label="إغلاق القائمة" data-i18n="curtain_close">إغلاق [خروج]</button>
+			</div>
+		</div>
+
+		<!-- Giant Serif Nav Links -->
+		<nav class="luxe-curtain-nav" aria-label="روابط المونوغراف">
+			<a href="/" class="luxe-curtain-nav__item" data-preview="/wp-content/themes/blockskit-child/assets/images/luxe_hero_foyer.jpg">
+				<span class="luxe-curtain-nav__num" data-i18n="curtain_num_1">01</span>
+				<span class="luxe-curtain-nav__title" data-i18n="nav_home">الرئيسية</span>
+			</a>
+			<a href="/about/" class="luxe-curtain-nav__item" data-preview="/wp-content/themes/blockskit-child/assets/images/luxe_palace_courtyard.jpg">
+				<span class="luxe-curtain-nav__num" data-i18n="curtain_num_2">02</span>
+				<span class="luxe-curtain-nav__title" data-i18n="nav_about">عن الاستوديو</span>
+			</a>
+			<a href="/services/" class="luxe-curtain-nav__item" data-preview="/wp-content/themes/blockskit-child/assets/images/luxe_majlis_salon.jpg">
+				<span class="luxe-curtain-nav__num" data-i18n="curtain_num_3">03</span>
+				<span class="luxe-curtain-nav__title" data-i18n="nav_services">منظومة الخدمات</span>
+			</a>
+			<a href="/approach/" class="luxe-curtain-nav__item" data-preview="/wp-content/themes/blockskit-child/assets/images/luxe_joinery_detail.jpg">
+				<span class="luxe-curtain-nav__num" data-i18n="curtain_num_4">04</span>
+				<span class="luxe-curtain-nav__title" data-i18n="nav_approach">المنهج والاستثمار</span>
+			</a>
+			<a href="/projects/" class="luxe-curtain-nav__item" data-preview="/wp-content/themes/blockskit-child/assets/images/luxe_dining_pavilion.jpg">
+				<span class="luxe-curtain-nav__num" data-i18n="curtain_num_5">05</span>
+				<span class="luxe-curtain-nav__title" data-i18n="nav_projects">أرشيف المشاريع</span>
+			</a>
+			<a href="/contact/" class="luxe-curtain-nav__item" data-preview="/wp-content/themes/blockskit-child/assets/images/luxe_sky_penthouse.jpg">
+				<span class="luxe-curtain-nav__num" data-i18n="curtain_num_6">06</span>
+				<span class="luxe-curtain-nav__title" data-i18n="nav_contact">الملف الخاص والتواصل</span>
+			</a>
+		</nav>
+
+		<!-- Floating Hover Image Preview -->
+		<div class="luxe-curtain-preview" id="luxe-curtain-preview">
+			<img src="/wp-content/themes/blockskit-child/assets/images/luxe_hero_foyer.jpg" alt="معاينة المعمار" loading="lazy">
+		</div>
+
+		<div class="luxe-curtain-menu__footer">
+			<div>
+				<span class="luxe-meta-latin" data-i18n="curtain_desk" style="display: block; margin-bottom: 0.5rem;">مكتب الاستوديو</span>
+				<span data-i18n="curtain_addr">الرياض، المملكة العربية السعودية<br>طريق الملك فهد، برج العليا</span>
+			</div>
+			<div>
+				<span class="luxe-meta-latin" data-i18n="curtain_line" style="display: block; margin-bottom: 0.5rem;">الخط المباشر</span>
+				<span data-i18n="curtain_line_val">+966 11 000 0000<br>مكتب المراسلات المعتمد</span>
+			</div>
+			<div>
+				<span class="luxe-meta-latin" data-i18n="curtain_hours_label" style="display: block; margin-bottom: 0.5rem;">جلسات سرية خاصة</span>
+				<span data-i18n="curtain_hours_val">الأحد - الخميس: 9:00 ص - 6:00 م<br>جلسات استشارية بخصوصية مطلقة</span>
+			</div>
+			<div>
+				<span class="luxe-meta-latin" data-i18n="curtain_palette" style="display: block; margin-bottom: 0.5rem;">لوحة الأجواء المعمارية</span>
+				<div class="luxe-theme-switcher-wrap">
+					<button type="button" class="luxe-theme-btn is-active" data-theme-target="noir" data-i18n="theme_noir" title="نمط الحبر الداكن">حبر داكن</button>
+					<button type="button" class="luxe-theme-btn" data-theme-target="limestone" data-i18n="theme_limestone" title="نمط الحجر الجيري">حجر جيري</button>
+					<button type="button" class="luxe-theme-btn" data-theme-target="bronze" data-i18n="theme_bronze" title="نمط البرونز الخليجي">برونز</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- /wp:group -->

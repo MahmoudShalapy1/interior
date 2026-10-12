@@ -1,0 +1,324 @@
+/**
+ * INTERIOR Architectural Layout Engine
+ * Logical Properties (RTL/LTR), Editorial Rhythm & Asymmetric Grids
+ *
+ * @package Blockskit_Child
+ */
+
+/* 1. Global Box Sizing & Fluid Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video, figure {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 2. Architectural Containers */
+.luxe-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-gutter);
+}
+
+.luxe-container-wide {
+  width: 100%;
+  max-width: var(--container-wide);
+  margin-inline: auto;
+  padding-inline: var(--container-gutter);
+}
+
+.luxe-container-bleed {
+  width: 100%;
+  max-width: 100%;
+  padding-inline: 0;
+}
+
+/* 3. Section Vertical Rhythm */
+.luxe-section {
+  position: relative;
+  padding-block: var(--section-gutter);
+  background-color: var(--interior-ink);
+  color: var(--interior-bone);
+  overflow: hidden;
+  border-bottom: 1px solid var(--interior-hairline);
+}
+
+/* 4. Section Tone Alternation (Rhythmic Architecture) */
+/* Tone A: Obsidian Deep (Default) */
+.luxe-section--ink {
+  background-color: var(--interior-ink);
+  color: var(--interior-bone);
+}
+
+/* Tone B: Charcoal Surface */
+.luxe-section--charcoal {
+  background-color: var(--interior-charcoal);
+  color: var(--interior-bone);
+}
+
+/* Tone C: Limestone Editorial (Warm Daylight Resonance) */
+.luxe-section--limestone {
+  background-color: var(--interior-limestone);
+  color: var(--interior-ink);
+}
+
+.luxe-section--limestone h1,
+.luxe-section--limestone h2,
+.luxe-section--limestone h3,
+.luxe-section--limestone .luxe-heading {
+  color: var(--interior-ink);
+}
+
+.luxe-section--limestone p {
+  color: #38352F;
+}
+
+.luxe-section--limestone .luxe-tag-latin,
+.luxe-section--limestone .luxe-meta-latin {
+  color: #8C6D3F;
+}
+
+.luxe-section--limestone .luxe-hairline {
+  border-color: var(--interior-hairline-dark);
+}
+
+/* 5. Asymmetric Editorial Grid Systems */
+.luxe-grid {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 3.5rem);
+}
+
+.luxe-grid-2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.luxe-grid-3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.luxe-grid-4col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Architectural Asymmetric Split: 60/40 or 65/35 */
+.luxe-split-editorial {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .luxe-split-editorial {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+
+  .luxe-split-editorial--reverse {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+}
+
+@media (max-width: 991px) {
+  .luxe-grid-2col,
+  .luxe-grid-3col,
+  .luxe-grid-4col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 6. Hairline Structural Dividers */
+.luxe-main > .luxe-hairline {
+  display: none !important;
+}
+
+.luxe-hairline {
+  border: 0;
+  border-top: 1px solid var(--interior-hairline);
+  margin-block: clamp(2rem, 4vw, 4rem);
+}
+
+.luxe-hairline-vertical {
+  width: 1px;
+  background-color: var(--interior-hairline);
+  height: 100%;
+}
+
+/* 7. Mobile Luxury Architecture & Touch Optimization (Section 9) */
+@media (hover: none) and (pointer: coarse) {
+  #luxe-cursor-dot,
+  #luxe-cursor-ring,
+  #luxe-cursor-coords {
+    display: none !important;
+  }
+  .luxe-floating-preview {
+    display: none !important;
+  }
+  * {
+    cursor: auto !important;
+  }
+}
+
+.luxe-mobile-action-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .luxe-mobile-action-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: rgba(14, 13, 11, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--interior-hairline);
+    padding: 0.85rem 1.25rem;
+    gap: 0.75rem;
+    align-items: center;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .luxe-mobile-action-bar .luxe-mobile-btn {
+    flex: 1;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: var(--font-body);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--interior-brass);
+  }
+
+  body {
+    padding-bottom: 72px; /* Prevent bottom bar from covering content */
+  }
+}
+
+/* 8. Arabic RTL Balance & Typography Safeguards (Section 10) */
+h1, h2, h3, .luxe-hero__title, .luxe-wizard-question {
+  text-wrap: balance;
+  letter-spacing: normal !important;
+}
+
+[dir="rtl"] .luxe-meta-latin,
+[dir="rtl"] .luxe-tag-latin {
+  letter-spacing: normal !important;
+  font-family: var(--font-body);
+}
+
+[dir="rtl"] .luxe-roman-num {
+  letter-spacing: 0.15em;
+  display: inline-block;
+  direction: ltr;
+}
+
+/* 9. Architectural Minimal Scrollbar (Desktop Signature) */
+@media (pointer: fine) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--interior-ink);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--interior-charcoal-light);
+    border: 1px solid var(--interior-hairline);
+    border-radius: 0;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--interior-brass);
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--interior-charcoal-light) var(--interior-ink);
+  }
+}
+
+/* 10. Architectural Monograph Print Dossier Protocol (Ctrl+P / PDF Export) */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-size: 11pt !important;
+    line-height: 1.6 !important;
+    padding: 0 !important;
+  }
+
+  #luxe-preloader,
+  #luxe-ambient-spotlight,
+  #luxe-cursor-dot,
+  #luxe-cursor-ring,
+  #luxe-cursor-coords,
+  #luxe-scroll-progress,
+  .luxe-header,
+  .luxe-minimap,
+  .luxe-mobile-action-bar,
+  .luxe-mobile-toggle,
+  .luxe-curtain-menu,
+  .luxe-theme-switcher-wrap,
+  .luxe-btn,
+  .luxe-hero__scroll-indicator {
+    display: none !important;
+  }
+
+  .luxe-hero::before {
+    content: "INTERIOR — HAUTE ARCHITECTURE & LUXURY FIT-OUT | RIYADH · STRICTLY CONFIDENTIAL DOSSIER";
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9pt;
+    letter-spacing: 0.15em;
+    border-bottom: 2pt solid #000000;
+    padding-bottom: 8pt;
+    margin-bottom: 24pt;
+    text-align: right;
+  }
+
+  .luxe-container {
+    max-width: 100% !important;
+    padding: 0 1cm !important;
+  }
+
+  .luxe-hero {
+    min-height: auto !important;
+    page-break-after: always;
+  }
+
+  .luxe-section {
+    padding: 2cm 0 !important;
+    page-break-inside: avoid;
+    border-bottom: 1pt solid #dddddd;
+  }
+
+  h1, h2, h3 {
+    color: #000000 !important;
+    page-break-after: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+}
+
+
+
