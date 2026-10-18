@@ -461,7 +461,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <script>
 (function() {
-	// 1. Reading Progress Bar
+	if (window.InteriorArticleFaq && typeof window.InteriorArticleFaq.init === 'function') {
+		window.InteriorArticleFaq.init();
+		return;
+	}
+
+	// Reading Progress Bar
 	var bar = document.getElementById('luxe-reading-progress');
 	if (bar) {
 		window.addEventListener('scroll', function() {
@@ -473,43 +478,53 @@ if ( ! defined( 'ABSPATH' ) ) {
 		}, { passive: true });
 	}
 
-	// 2. Interactive FAQ Accordion
-	var triggers = document.querySelectorAll('.article-faq .accordion__trigger');
-	triggers.forEach(function(btn) {
-		btn.addEventListener('click', function() {
-			var item = btn.closest('.accordion__item');
-			var panelId = btn.getAttribute('aria-controls');
-			var panel = panelId ? document.getElementById(panelId) : null;
-			var isOpen = btn.getAttribute('aria-expanded') === 'true';
+	// Delegated FAQ Accordion click
+	document.addEventListener('click', function(e) {
+		var btn = e.target.closest('.article-faq .accordion__trigger');
+		if (!btn) return;
+		e.preventDefault();
 
-			btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-			if (item) {
-				item.classList.toggle('is-open', !isOpen);
-			}
-			if (panel) {
-				if (isOpen) {
-					panel.setAttribute('hidden', '');
-				} else {
-					panel.removeAttribute('hidden');
+		var item = btn.closest('.accordion__item');
+		var container = btn.closest('.article-faq__accordion');
+		var panelId = btn.getAttribute('aria-controls');
+		var panel = panelId ? document.getElementById(panelId) : (item ? item.querySelector('.accordion__panel') : null);
+		var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+		if (!isOpen && container) {
+			container.querySelectorAll('.accordion__item').forEach(function(other) {
+				if (other !== item) {
+					other.classList.remove('is-open');
+					var obtn = other.querySelector('.accordion__trigger');
+					if (obtn) obtn.setAttribute('aria-expanded', 'false');
+					var opanelId = obtn ? obtn.getAttribute('aria-controls') : null;
+					var opanel = opanelId ? document.getElementById(opanelId) : other.querySelector('.accordion__panel');
+					if (opanel) opanel.setAttribute('hidden', '');
 				}
+			});
+		}
+
+		btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+		if (item) item.classList.toggle('is-open', !isOpen);
+		if (panel) {
+			if (isOpen) {
+				panel.setAttribute('hidden', '');
+			} else {
+				panel.removeAttribute('hidden');
 			}
-		});
+		}
 	});
 
-	// 3. Copy Article Link Button
-	var copyBtns = document.querySelectorAll('[data-copy-link]');
-	copyBtns.forEach(function(copyBtn) {
-		copyBtn.addEventListener('click', function() {
-			var url = copyBtn.getAttribute('data-copy-link') || window.location.href;
-			if (navigator.clipboard && navigator.clipboard.writeText) {
-				navigator.clipboard.writeText(url).then(function() {
-					copyBtn.classList.add('is-copied');
-					setTimeout(function() {
-						copyBtn.classList.remove('is-copied');
-					}, 2000);
-				});
-			}
-		});
+	// Copy Article Link Button
+	document.addEventListener('click', function(e) {
+		var copyBtn = e.target.closest('[data-copy-link]');
+		if (!copyBtn) return;
+		var url = copyBtn.getAttribute('data-copy-link') || window.location.href;
+		if (navigator.clipboard && navigator.clipboard.writeText) {
+			navigator.clipboard.writeText(url).then(function() {
+				copyBtn.classList.add('is-copied');
+				setTimeout(function() { copyBtn.classList.remove('is-copied'); }, 2000);
+			});
+		}
 	});
 })();
 </script>

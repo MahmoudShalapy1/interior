@@ -4291,18 +4291,52 @@
   height: 0.75rem;
 }
 
-.article-faq .accordion__trigger[aria-expanded="true"] .accordion__icon {
+.article-faq .accordion__item {
+  transition: background-color 0.25s ease;
+}
+
+.article-faq .accordion__item.is-open {
+  background: rgba(181, 154, 106, 0.035);
+}
+
+.article-faq .accordion__trigger[aria-expanded="true"] .accordion__icon,
+.article-faq .accordion__item.is-open .accordion__trigger .accordion__icon {
   background: var(--interior-brass);
   border-color: var(--interior-brass);
 }
 
-.article-faq .accordion__trigger[aria-expanded="true"] .accordion__icon::before {
+.article-faq .accordion__trigger[aria-expanded="true"] .accordion__icon::before,
+.article-faq .accordion__item.is-open .accordion__trigger .accordion__icon::before {
   background: var(--interior-ink);
 }
 
-.article-faq .accordion__trigger[aria-expanded="true"] .accordion__icon::after {
+.article-faq .accordion__trigger[aria-expanded="true"] .accordion__icon::after,
+.article-faq .accordion__item.is-open .accordion__trigger .accordion__icon::after {
   opacity: 0;
   transform: scaleY(0);
+}
+
+.article-faq .accordion__panel {
+  display: block;
+}
+
+.article-faq .accordion__panel[hidden] {
+  display: none !important;
+}
+
+.article-faq .accordion__item.is-open .accordion__panel {
+  animation: articleFaqSlideDown 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes articleFaqSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .article-faq .accordion__content {
