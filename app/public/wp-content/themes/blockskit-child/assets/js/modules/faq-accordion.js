@@ -10,45 +10,65 @@
   'use strict';
 
   var readingScrollHandler = null;
+  var isToggling = false;
 
   /**
    * Toggle an Article FAQ item (.article-faq)
    */
   function toggleArticleFaq(trigger) {
-    if (!trigger) return;
-    var item = trigger.closest('.accordion__item');
-    if (!item) return;
+    if (!trigger || isToggling) return;
+    isToggling = true;
 
-    var container = trigger.closest('.article-faq__accordion') || trigger.closest('.article-faq');
-    var panelId = trigger.getAttribute('aria-controls');
-    var panel = panelId ? document.getElementById(panelId) : item.querySelector('.accordion__panel');
+    try {
+      var item = trigger.closest('.accordion__item');
+      if (!item) return;
 
-    var isCurrentlyOpen = trigger.getAttribute('aria-expanded') === 'true' || item.classList.contains('is-open');
+      var container = trigger.closest('.article-faq__accordion') || trigger.closest('.article-faq');
+      var panelId = trigger.getAttribute('aria-controls');
+      var panel = panelId ? document.getElementById(panelId) : item.querySelector('.accordion__panel');
 
-    // If opening this item, close other items in the same container for clean luxury UX
-    if (!isCurrentlyOpen && container) {
-      var allItems = container.querySelectorAll('.accordion__item');
-      allItems.forEach(function(other) {
-        if (other !== item) {
-          other.classList.remove('is-open');
-          var otherBtn = other.querySelector('.accordion__trigger');
-          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
-          var otherPanelId = otherBtn ? otherBtn.getAttribute('aria-controls') : null;
-          var otherPanel = otherPanelId ? document.getElementById(otherPanelId) : other.querySelector('.accordion__panel');
-          if (otherPanel) otherPanel.setAttribute('hidden', '');
+      // Check current open status
+      var isCurrentlyOpen = (trigger.getAttribute('aria-expanded') === 'true') || item.classList.contains('is-open');
+
+      if (isCurrentlyOpen) {
+        // Close this item
+        trigger.setAttribute('aria-expanded', 'false');
+        item.classList.remove('is-open');
+        if (panel) {
+          panel.setAttribute('hidden', '');
+          panel.style.display = 'none';
         }
-      });
-    }
+      } else {
+        // Close all other sibling items in this accordion
+        if (container) {
+          var allItems = container.querySelectorAll('.accordion__item');
+          allItems.forEach(function(other) {
+            if (other !== item) {
+              other.classList.remove('is-open');
+              var otherBtn = other.querySelector('.accordion__trigger');
+              if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+              var otherPanelId = otherBtn ? otherBtn.getAttribute('aria-controls') : null;
+              var otherPanel = otherPanelId ? document.getElementById(otherPanelId) : other.querySelector('.accordion__panel');
+              if (otherPanel) {
+                otherPanel.setAttribute('hidden', '');
+                otherPanel.style.display = 'none';
+              }
+            }
+          });
+        }
 
-    // Toggle current item
-    if (isCurrentlyOpen) {
-      trigger.setAttribute('aria-expanded', 'false');
-      item.classList.remove('is-open');
-      if (panel) panel.setAttribute('hidden', '');
-    } else {
-      trigger.setAttribute('aria-expanded', 'true');
-      item.classList.add('is-open');
-      if (panel) panel.removeAttribute('hidden');
+        // Open this item
+        trigger.setAttribute('aria-expanded', 'true');
+        item.classList.add('is-open');
+        if (panel) {
+          panel.removeAttribute('hidden');
+          panel.style.display = 'block';
+        }
+      }
+    } finally {
+      setTimeout(function() {
+        isToggling = false;
+      }, 100);
     }
   }
 
@@ -161,8 +181,10 @@
         if (panel) {
           if (isOpen) {
             panel.removeAttribute('hidden');
+            panel.style.display = 'block';
           } else {
             panel.setAttribute('hidden', '');
+            panel.style.display = 'none';
           }
         }
       });
@@ -180,49 +202,54 @@
   }
 
   /**
-   * Global Delegated Event Listeners (Persistent & Immune to SPA Swaps)
+   * Global Delegated Event Listeners (Attached ONCE, Persistent & Immune to SPA Swaps)
    */
-  document.addEventListener('click', function(e) {
-    // A. Article FAQ Trigger Click
-    var articleTrigger = e.target.closest('.article-faq .accordion__trigger');
-    if (articleTrigger) {
-      e.preventDefault();
-      toggleArticleFaq(articleTrigger);
-      return;
-    }
+  if (!window.__interiorArticleFaqDelegated) {
+    window.__interiorArticleFaqDelegated = true;
 
-    // B. Luxe FAQ Header Click (Approach / Services)
-    var luxeHeader = e.target.closest('.luxe-faq-header');
-    if (luxeHeader) {
-      var item = luxeHeader.closest('.luxe-faq-item');
-      if (item) {
-        e.preventDefault();
-        toggleLuxeFaq(item);
-        return;
-      }
-    }
-
-    // C. Copy Link Button
-    var copyBtn = e.target.closest('[data-copy-link]');
-    if (copyBtn) {
-      e.preventDefault();
-      handleCopyLink(copyBtn);
-      return;
-    }
-  });
-
-  // Keyboard accessibility (Enter / Space on accordion triggers)
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter' || e.key === ' ') {
+    document.addEventListener('click', function(e) {
+      // A. Article FAQ Trigger Click
       var articleTrigger = e.target.closest('.article-faq .accordion__trigger');
       if (articleTrigger) {
         e.preventDefault();
+        e.stopPropagation();
         toggleArticleFaq(articleTrigger);
+        return;
       }
-    }
-  });
 
-  // Expose to window for direct calls if needed
+      // B. Luxe FAQ Header Click (Approach / Services)
+      var luxeHeader = e.target.closest('.luxe-faq-header');
+      if (luxeHeader) {
+        var item = luxeHeader.closest('.luxe-faq-item');
+        if (item) {
+          e.preventDefault();
+          toggleLuxeFaq(item);
+          return;
+        }
+      }
+
+      // C. Copy Link Button
+      var copyBtn = e.target.closest('[data-copy-link]');
+      if (copyBtn) {
+        e.preventDefault();
+        handleCopyLink(copyBtn);
+        return;
+      }
+    }, true); // Use capture phase so nothing can intercept or prevent it
+
+    // Keyboard accessibility (Enter / Space on accordion triggers)
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        var articleTrigger = e.target.closest('.article-faq .accordion__trigger');
+        if (articleTrigger) {
+          e.preventDefault();
+          toggleArticleFaq(articleTrigger);
+        }
+      }
+    });
+  }
+
+  // Expose to window for direct inspection if needed
   window.InteriorArticleFaq = {
     toggle: toggleArticleFaq,
     init: initAllFaqAndArticles
